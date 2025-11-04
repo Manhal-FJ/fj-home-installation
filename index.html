@@ -12,7 +12,7 @@
       color: #333;
     }
     header {
-      background-color: #1e88e5;
+      background: linear-gradient(to right, #1565c0, #1e88e5);
       color: white;
       text-align: center;
       padding: 2em 1em;
@@ -24,6 +24,13 @@
     header p {
       margin: 0.5em 0 0;
       font-size: 1.2em;
+    }
+    .banner {
+      width: 100%;
+      height: 320px;
+      background-image: url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
     }
     section {
       max-width: 900px;
@@ -46,19 +53,26 @@
     li {
       margin: 10px 0;
     }
+    .button {
+      display: inline-block;
+      background-color: #1e88e5;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 15px;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background-color: #1565c0;
+    }
     footer {
       background-color: #333;
       color: white;
       text-align: center;
       padding: 20px;
       margin-top: 40px;
-    }
-    a {
-      color: #1e88e5;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
@@ -70,6 +84,8 @@
   <p>Professional TV Mounting • Furniture Assembly • Home Setup</p>
 </header>
 
+<div class="banner"></div>
+
 <section>
   <h2>Our Services</h2>
   <ul>
@@ -78,6 +94,7 @@
     <li>🛏️ Bunk Bed & Cabinet Installation</li>
     <li>🏠 Home & Office Setup</li>
   </ul>
+  <a class="button" href="mailto:manhal.isc@gmail.com">📅 Book a Service</a>
 </section>
 
 <section>
