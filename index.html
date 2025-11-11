@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FJ Home Installation | TV Mounting, Furniture & Electrical Services in Houston</title>
+  <title>FJ Home Installation | TV Mounting, Electrical & Camera Setup in Houston</title>
 
   <!-- SEO Meta Tags -->
   <meta name="description" content="Professional TV mounting, furniture assembly, electrical installation, and camera setup services in Houston, TX. Fast, affordable, and reliable home installation.">
-  <meta name="keywords" content="TV mounting Houston, furniture assembly, electrical installation Houston, camera setup Houston, home installation services, FJ Home Installation">
+  <meta name="keywords" content="TV mounting Houston, furniture assembly Houston, electrical installation Houston, camera setup Houston, home installation, FJ Home Installation">
   <meta name="author" content="Manhal Naji">
 
   <!-- Open Graph for Social Media -->
@@ -142,6 +142,12 @@
         width: 90%;
       }
     }
+
+    /* Gallery hover zoom */
+    #gallery img:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s;
+    }
   </style>
 </head>
 <body>
@@ -193,6 +199,21 @@
     </div>
   </section>
 
+  <!-- 📸 Gallery Section -->
+  <section id="gallery" style="text-align:center; padding:40px 20px; background-color:#ffffff;">
+    <h2 style="color:#007BFF;">Our Work Gallery</h2>
+    <p>Take a look at the type of professional installation services we provide.</p>
+
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin-top:25px;">
+      <a href="https://source.unsplash.com/featured/?tv,installation" target="_blank"><img src="https://source.unsplash.com/featured/?tv,installation" alt="TV Mounting" style="width:300px;height:200px;object-fit:cover;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.1);"></a>
+      <a href="https://source.unsplash.com/featured/?furniture,assembly" target="_blank"><img src="https://source.unsplash.com/featured/?furniture,assembly" alt="Furniture Assembly" style="width:300px;height:200px;object-fit:cover;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.1);"></a>
+      <a href="https://source.unsplash.com/featured/?home,theater" target="_blank"><img src="https://source.unsplash.com/featured/?home,theater" alt="Home Theater" style="width:300px;height:200px;object-fit:cover;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.1);"></a>
+      <a href="https://source.unsplash.com/featured/?electrical,installation" target="_blank"><img src="https://source.unsplash.com/featured/?electrical,installation" alt="Electrical Work" style="width:300px;height:200px;object-fit:cover;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.1);"></a>
+      <a href="https://source.unsplash.com/featured/?security,camera" target="_blank"><img src="https://source.unsplash.com/featured/?security,camera" alt="Camera Setup" style="width:300px;height:200px;object-fit:cover;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.1);"></a>
+      <a href="https://source.unsplash.com/featured/?houston,home" target="_blank"><img src="https://source.unsplash.com/featured/?houston,home" alt="Houston Homes" style="width:300px;height:200px;object-fit:cover;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.1);"></a>
+    </div>
+  </section>
+
   <!-- ⭐ Customer Reviews Section -->
   <section id="reviews" style="text-align:center; padding:40px 20px; background-color:#f0f8ff;">
     <h2 style="color:#007BFF;">Customer Reviews</h2>
@@ -220,7 +241,6 @@
 
     <p style="margin-top:30px;">⭐⭐⭐⭐⭐ <br><strong>Average Rating:</strong> 5.0 / 5 (Based on 100+ satisfied customers)</p>
 
-    <!-- Optional Google Review Button -->
     <a href="https://g.page/r/YOUR-GOOGLE-BUSINESS-LINK" target="_blank">
       <button style="background:#007BFF; color:white; border:none; padding:10px 20px; border-radius:5px; margin-top:15px; cursor:pointer;">Leave a Review on Google</button>
     </a>
