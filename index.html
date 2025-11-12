@@ -2,310 +2,289 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="FJ Home Installation provides professional TV mounting, furniture assembly, home theater, electrical work, and camera setup services in Houston and Katy, TX." />
-  <title>FJ Home Installation | Houston, TX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FJ Home Installation | TV Mounting • Assembly • Electrical • Cameras</title>
+  <meta name="description" content="Professional TV mounting, furniture assembly, electrical installations, and security camera setup in Houston, Katy, Sugar Land, and Cypress. Fast, friendly, and affordable." />
+  <link rel="icon" href="https://img.icons8.com/fluency/96/tv.png" />
   <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9fbff;
-      color: #333;
-      scroll-behavior: smooth;
+    :root{
+      --brand:#0B7BFF;
+      --brand-2:#0552c7;
+      --text:#1d2433;
+      --muted:#667085;
+      --bg:#f7fbff;
+      --card:#ffffff;
+      --ring:rgba(11,123,255,.12);
+      --shadow:0 10px 30px rgba(16,24,40,.06);
+      --radius:18px;
     }
-
-    header {
-      background-color: #007bff;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-
-    nav {
-      background-color: #0056b3;
-      display: flex;
-      justify-content: center;
-      padding: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(to bottom, #ffffff, #dceeff);
-    }
-
-    .hero h2 {
-      color: #007bff;
-      font-size: 2em;
-    }
-
-    .hero p {
-      font-size: 1.1em;
-      margin: 10px auto;
-      max-width: 600px;
-    }
-
-    .btn {
-      display: inline-block;
-      background-color: #007bff;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 20px;
-    }
-
-    .btn:hover {
-      background-color: #0056b3;
-    }
-
-    section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    /* --- SERVICES --- */
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-      margin-top: 20px;
-    }
-
-    .service-card {
-      background-color: white;
-      border-radius: 12px;
-      width: 220px;
-      padding: 20px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .service-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 18px rgba(0, 123, 255, 0.3);
-    }
-
-    .service-card img {
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
-    }
-
-    .service-card h3 {
-      color: #007bff;
-      font-size: 1.1em;
-      margin-top: 15px;
-    }
-
-    /* --- GALLERY --- */
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 35px;
-      margin-top: 30px;
-    }
-
-    .gallery-item {
-      background: #f8f9ff;
-      border-radius: 15px;
-      padding: 20px;
-      width: 160px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .gallery-item:hover {
-      transform: scale(1.07);
-      box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
-    }
-
-    .gallery-item img {
-      width: 100px;
-      height: 100px;
-      object-fit: contain;
-      border-radius: 12px;
-    }
-
-    .gallery-item p {
-      margin-top: 10px;
-      font-size: 16px;
-      font-weight: 500;
-      color: #333;
-    }
-
-    /* --- REVIEWS --- */
-    .reviews {
-      background-color: #f0f8ff;
-      padding: 50px 20px;
-    }
-
-    .review-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-      margin-top: 20px;
-    }
-
-    .review-card {
-      background: white;
-      border-radius: 12px;
-      width: 300px;
-      padding: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      text-align: left;
-    }
-
-    .review-card p {
-      font-size: 0.95em;
-      color: #333;
-    }
-
-    .review-card strong {
-      color: #007bff;
-    }
-
-    /* --- FOOTER --- */
-    footer {
-      background-color: #007bff;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-    }
-
-    @media (max-width: 700px) {
-      .service-card,
-      .gallery-item {
-        width: 140px;
-      }
-    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--text);background:#fff}
+    a{color:var(--brand);text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1100px;margin:auto;padding:28px}
+    .btn{display:inline-flex;gap:.55rem;align-items:center;background:var(--brand);color:#fff;padding:12px 18px;border-radius:14px;font-weight:600;border:0;cursor:pointer;box-shadow:0 6px 16px var(--ring)}
+    .btn:hover{background:var(--brand-2)}
+    /* Hero */
+    .hero{background:linear-gradient(180deg,#eaf4ff 0%,#ffffff 100%);padding:56px 0 10px}
+    .hero .container{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#ecf3ff;color:var(--brand);font-weight:700;font-size:.85rem}
+    h1{font-size:clamp(28px,4vw,42px);margin:10px 0 8px}
+    .lead{color:var(--muted);font-size:1.05rem;line-height:1.6}
+    .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .phone{font-weight:700}
+    .hero-img{border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+    .hero-img img{aspect-ratio:16/11;object-fit:cover;width:100%}
+    /* Blocks */
+    section{padding:18px 0}
+    .section-alt{background:var(--bg);padding:40px 0}
+    h2{font-size:clamp(22px,3vw,32px);text-align:center;margin:8px 0 8px}
+    .sub{max-width:760px;margin:8px auto 26px;color:var(--muted);text-align:center}
+    /* Services */
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid #eef2f6}
+    .card img{width:100%;height:180px;object-fit:cover}
+    .card .p{padding:16px 16px 18px}
+    .card h3{margin:0 0 8px;font-size:1.08rem}
+    .pill{display:inline-block;background:#eef5ff;color:var(--brand);font-weight:700;padding:4px 8px;border-radius:10px;font-size:.76rem}
+    .services .card{grid-column:span 6}
+    @media(min-width:860px){.services .card{grid-column:span 3}}
+    /* Gallery */
+    .gallery .card img{height:210px}
+    .gallery .card{grid-column:span 6}
+    @media(min-width:860px){.gallery .card{grid-column:span 4}}
+    /* Reviews */
+    .reviews .item{grid-column:span 12;background:#fff;border:1px solid #eef2f6;border-radius:18px;padding:20px;box-shadow:var(--shadow)}
+    @media(min-width:860px){.reviews .item{grid-column:span 4}}
+    .stars{color:#f5b50a;letter-spacing:2px;margin-bottom:10px}
+    .name{color:#0b1324;font-weight:700;margin-top:8px}
+    /* Contact */
+    .contact .wrap{display:grid;grid-template-columns:1fr;gap:18px}
+    .contact .card{padding:18px}
+    .cta-line{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .small{color:var(--muted);font-size:.92rem}
+    footer{padding:26px 0;text-align:center;color:var(--muted);border-top:1px solid #eef2f6;margin-top:34px}
+    .list{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+    .list a{background:#eef5ff;padding:6px 10px;border-radius:10px}
   </style>
 </head>
-
 <body>
-  <header>
-    <h1>FJ Home Installation</h1>
-    <p>Professional TV Mounting • Furniture Assembly • Electrical • Cameras • Houston, TX</p>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div>
+        <span class="badge">Houston • Katy • Sugar Land • Cypress</span>
+        <h1>FJ Home Installation</h1>
+        <p class="lead">Professional <b>TV mounting</b>, <b>furniture assembly</b>, <b>electrical installations</b>, and <b>security camera setup</b>. Fast, friendly, and affordable.</p>
+        <div class="hero-cta">
+          <a class="btn" href="tel:+17139419647">📞 Call Now <span class="phone">(713) 941-9647</span></a>
+          <a class="btn" style="background:#14a44d" href="mailto:manhal.isc@gmail.com">✉️ manhal.isc@gmail.com</a>
+        </div>
+        <p class="small" style="margin-top:8px">Mon–Sat 8:00 AM – 7:00 PM • Licensed & insured</p>
+      </div>
+      <div class="hero-img">
+        <img alt="Technician professionally mounting a large TV on drywall" loading="lazy"
+             src="https://images.unsplash.com/photo-1583225272834-05f728621f08?auto=format&fit=crop&w=1400&q=70" />
+      </div>
+    </div>
   </header>
 
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <!-- SERVICES -->
+  <section class="section-alt">
+    <div class="container services">
+      <h2>Our Services</h2>
+      <p class="sub">Select, book, and relax — we’ll handle the heavy lifting with clean, safe, and code-compliant work.</p>
 
-  <section class="hero">
-    <h2>Fast • Reliable • Professional</h2>
-    <p>We specialize in TV mounting, furniture assembly, home theater setup, and electrical work across Houston and Katy, TX.</p>
-    <a class="btn" href="tel:7139419647">Call (713) 941-9647</a>
-  </section>
+      <div class="grid">
+        <!-- TV Mounting -->
+        <article class="card">
+          <img alt="Installer leveling and mounting a flat-screen TV" loading="lazy"
+               src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=70" />
+          <div class="p">
+            <h3>TV Mounting</h3>
+            <p class="small">Drywall, brick, or above fireplaces. Concealed cables available.</p>
+            <span class="pill">Most popular</span>
+          </div>
+        </article>
 
-  <!-- 🔧 SERVICES SECTION -->
-  <section id="services">
-    <h2 style="color:#007bff;">Our Services</h2>
-    <div class="services">
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" alt="TV Mounting" />
-        <h3>TV Mounting</h3>
-      </div>
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2563/2563356.png" alt="Furniture Assembly" />
-        <h3>Furniture Assembly</h3>
-      </div>
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3211/3211364.png" alt="Home Theater" />
-        <h3>Home Theater Installation</h3>
-      </div>
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3177/3177351.png" alt="Electrical Work" />
-        <h3>Electrical Work</h3>
-      </div>
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3471/3471679.png" alt="Camera Setup" />
-        <h3>Camera Setup</h3>
+        <!-- Furniture Assembly -->
+        <article class="card">
+          <img alt="Technician assembling flat-pack furniture" loading="lazy"
+               src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1200&q=70" />
+          <div class="p">
+            <h3>Furniture Assembly</h3>
+            <p class="small">IKEA, Wayfair, Amazon & more — done safely and neatly.</p>
+          </div>
+        </article>
+
+        <!-- Home Theater -->
+        <article class="card">
+          <img alt="Home theater speakers and TV installed in a modern living room" loading="lazy"
+               src="https://source.unsplash.com/1200x800/?home-theater,living-room" />
+          <div class="p">
+            <h3>Home Theater Installation</h3>
+            <p class="small">Soundbars, speakers, projectors, and clean cable management.</p>
+          </div>
+        </article>
+
+        <!-- Electrical Work -->
+        <article class="card">
+          <img alt="Electrician installing a light fixture with proper safety" loading="lazy"
+               src="https://source.unsplash.com/1200x800/?electrician,lighting,installation" />
+          <div class="p">
+            <h3>Electrical Work</h3>
+            <p class="small">Ceiling lights, outlets, smart switches & more by a pro.</p>
+          </div>
+        </article>
+
+        <!-- Camera Setup -->
+        <article class="card">
+          <img alt="Technician installing an outdoor security camera" loading="lazy"
+               src="https://source.unsplash.com/1200x800/?security-camera,installation" />
+          <div class="p">
+            <h3>Camera Setup</h3>
+            <p class="small">Wired or Wi-Fi systems with app setup and positioning.</p>
+          </div>
+        </article>
+
+        <!-- Houston Homes -->
+        <article class="card">
+          <img alt="Houston home exterior at sunset" loading="lazy"
+               src="https://source.unsplash.com/1200x800/?houston,house" />
+          <div class="p">
+            <h3>Houston Homes</h3>
+            <p class="small">Proudly serving Houston and nearby cities since day one.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- 📸 GALLERY SECTION -->
-  <section id="gallery" style="background-color:#ffffff;">
-    <h2 style="color:#007BFF;">Our Work Gallery</h2>
-    <p>Take a look at the type of professional installation services we provide.</p>
-    <div class="gallery">
-      <div class="gallery-item">
-        <img src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" alt="TV Mounting" />
-        <p>TV Mounting</p>
-      </div>
-      <div class="gallery-item">
-        <img src="https://cdn-icons-png.flaticon.com/512/2563/2563356.png" alt="Furniture Assembly" />
-        <p>Furniture Assembly</p>
-      </div>
-      <div class="gallery-item">
-        <img src="https://cdn-icons-png.flaticon.com/512/3211/3211364.png" alt="Home Theater" />
-        <p>Home Theater</p>
-      </div>
-      <div class="gallery-item">
-        <img src="https://cdn-icons-png.flaticon.com/512/3177/3177351.png" alt="Electrical Work" />
-        <p>Electrical Work</p>
-      </div>
-      <div class="gallery-item">
-        <img src="https://cdn-icons-png.flaticon.com/512/3471/3471679.png" alt="Camera Setup" />
-        <p>Camera Setup</p>
-      </div>
-      <div class="gallery-item">
-        <img src="https://cdn-icons-png.flaticon.com/512/2942/2942809.png" alt="Houston Homes" />
-        <p>Houston Homes</p>
+  <!-- GALLERY -->
+  <section>
+    <div class="container gallery">
+      <h2>Our Work Gallery</h2>
+      <p class="sub">A few examples of the clean, professional installations we deliver.</p>
+
+      <div class="grid">
+        <article class="card">
+          <img alt="Mounted TV with hidden cables in a bright living room" loading="lazy"
+               src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1400&q=70" />
+          <div class="p"><h3>TV Mounting</h3></div>
+        </article>
+
+        <article class="card">
+          <img alt="Dining table and chairs assembled and placed neatly" loading="lazy"
+               src="https://images.unsplash.com/photo-1567016552902-47e8f87b0f3b?auto=format&fit=crop&w=1400&q=70" />
+          <div class="p"><h3>Furniture Assembly</h3></div>
+        </article>
+
+        <article class="card">
+          <img alt="Home theater setup with immersive audio" loading="lazy"
+               src="https://source.unsplash.com/1400x900/?home-theater,media-room" />
+          <div class="p"><h3>Home Theater</h3></div>
+        </article>
+
+        <article class="card">
+          <img alt="New ceiling lights installed and tested by an electrician" loading="lazy"
+               src="https://source.unsplash.com/1400x900/?electrician,ceiling-light" />
+          <div class="p"><h3>Electrical Work</h3></div>
+        </article>
+
+        <article class="card">
+          <img alt="Outdoor bullet camera mounted under eaves" loading="lazy"
+               src="https://source.unsplash.com/1400x900/?security-camera,cctv" />
+          <div class="p"><h3>Camera Setup</h3></div>
+        </article>
+
+        <article class="card">
+          <img alt="Modern Houston neighborhood street" loading="lazy"
+               src="https://source.unsplash.com/1400x900/?houston,neighborhood" />
+          <div class="p"><h3>Houston Homes</h3></div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ⭐ REVIEWS SECTION -->
-  <section id="reviews" class="reviews">
-    <h2 style="color:#007bff;">Customer Reviews</h2>
-    <p>Here’s what our customers say about our services!</p>
-    <div class="review-container">
-      <div class="review-card">
-        <p>"Manhal and his team did an amazing job mounting our TVs and setting up our security cameras. Very professional and neat work!"</p>
-        <p><strong>- Sarah L., Houston, TX</strong></p>
-      </div>
-      <div class="review-card">
-        <p>"IKEA furniture assembly done perfectly! Everything was clean, quick, and affordable. Highly recommend FJ Home Installation!"</p>
-        <p><strong>- Ahmed R., Katy, TX</strong></p>
-      </div>
-      <div class="review-card">
-        <p>"They installed ceiling lights and cameras for my shop. The result looks professional and works perfectly. 5 stars!"</p>
-        <p><strong>- Jessica T., Houston, TX</strong></p>
+  <!-- REVIEWS -->
+  <section class="section-alt">
+    <div class="container">
+      <h2>Customer Reviews</h2>
+      <p class="sub">Real feedback from happy customers about our quality and care.</p>
+
+      <div class="grid reviews">
+        <div class="item">
+          <div class="stars">★★★★★</div>
+          <p>“Manhal and his team mounted two TVs and set up our cameras perfectly. Fast, friendly, and super clean work!”</p>
+          <div class="name">— Sarah L., Houston, TX</div>
+        </div>
+        <div class="item">
+          <div class="stars">★★★★★</div>
+          <p>“IKEA wardrobe assembled in no time. Everything was sturdy and aligned. Highly recommend FJ Home Installation.”</p>
+          <div class="name">— Ahmed R., Katy, TX</div>
+        </div>
+        <div class="item">
+          <div class="stars">★★★★★</div>
+          <p>“They installed new ceiling lights and 4 cameras for my shop. Professional, neat, and very fair pricing.”</p>
+          <div class="name">— Jessica T., Cypress, TX</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 📞 CONTACT / FOOTER -->
-  <footer id="contact">
-    <p>📍 Serving Houston • Katy • Richmond • Sugar Land, TX</p>
-    <p>☎️ (713) 941-9647  |  ✉️ manhal.isc@gmail.com</p>
-    <p>© 2025 FJ Home Installation – All Rights Reserved.</p>
+  <!-- CONTACT -->
+  <section>
+    <div class="container contact">
+      <h2>Get a Free Quote</h2>
+      <p class="sub">Tell us what you need. We’ll respond quickly with pricing and availability.</p>
+
+      <div class="wrap">
+        <article class="card">
+          <div class="p">
+            <h3>Call / Text</h3>
+            <p class="cta-line"><a class="btn" href="tel:+17139419647">📞 (713) 941-9647</a></p>
+            <p class="small">Hours: Mon–Sat 8:00 AM – 7:00 PM</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="p">
+            <h3>Email</h3>
+            <p class="cta-line"><a class="btn" style="background:#14a44d" href="mailto:manhal.isc@gmail.com">✉️ manhal.isc@gmail.com</a></p>
+            <p class="small">We usually reply the same day.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="p">
+            <h3>Service Areas</h3>
+            <p class="small">Houston • Katy • Sugar Land • Cypress • and nearby</p>
+            <div class="list">
+              <span class="pill">TV Mounting</span>
+              <span class="pill">Assembly</span>
+              <span class="pill">Electrical</span>
+              <span class="pill">Cameras</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="list" style="margin-bottom:8px">
+        <a href="tel:+17139419647">Call</a>
+        <a href="mailto:manhal.isc@gmail.com">Email</a>
+        <a href="https://fjhomeinstallation.com">fjhomeinstallation.com</a>
+      </div>
+      © <span id="y"></span> FJ Home Installation • Houston, TX
+    </div>
   </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
