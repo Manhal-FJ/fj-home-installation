@@ -84,23 +84,30 @@
       gap: 25px;
     }
 
-    /* Service Cards */
+    /* Service Cards with icon and label */
     .card {
       background: var(--card-bg);
       box-shadow: 0 3px 8px var(--shadow);
       border-radius: 12px;
-      width: 140px;
-      height: 140px;
+      width: 250px;
+      height: 100px;
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 12px;
+      font-size: 1.5rem;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
-      font-size: 3rem;
       cursor: pointer;
     }
 
+    .card span {
+      font-weight: bold;
+      color: var(--brand);
+      font-size: 1.1rem;
+    }
+
     .card:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
       box-shadow: 0 5px 15px rgba(0, 68, 204, 0.2);
     }
 
@@ -148,11 +155,11 @@
     <h2>Our Services</h2>
     <p class="sub">We offer professional installation services across Houston and nearby areas.</p>
     <div class="grid">
-      <div class="card">📺</div>
-      <div class="card">🪑</div>
-      <div class="card">🎬</div>
-      <div class="card">⚡</div>
-      <div class="card">🎥</div>
+      <div class="card">📺 <span>TV Mounting</span></div>
+      <div class="card">🪑 <span>Furniture Assembly</span></div>
+      <div class="card">🎬 <span>Home Theater</span></div>
+      <div class="card">⚡ <span>Electrical Work</span></div>
+      <div class="card">🎥 <span>Camera Setup</span></div>
     </div>
   </section>
 
