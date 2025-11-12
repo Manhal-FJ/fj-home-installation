@@ -76,6 +76,7 @@
       color: #555;
     }
 
+    /* Grid layout */
     .grid {
       display: flex;
       flex-wrap: wrap;
@@ -83,27 +84,24 @@
       gap: 25px;
     }
 
+    /* Service Cards */
     .card {
       background: var(--card-bg);
       box-shadow: 0 3px 8px var(--shadow);
       border-radius: 12px;
-      width: 250px;
-      padding: 25px;
-      text-align: left;
-      transition: transform 0.2s ease;
+      width: 140px;
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      font-size: 3rem;
+      cursor: pointer;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card h3 {
-      font-size: 1.2rem;
-      color: var(--brand);
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
+      transform: scale(1.1);
+      box-shadow: 0 5px 15px rgba(0, 68, 204, 0.2);
     }
 
     footer {
@@ -124,6 +122,7 @@
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
     <h1>FJ Home Installation</h1>
     <p><strong>Professional TV mounting, furniture assembly, electrical installations, and security camera setup</strong> — serving Houston, Katy, Sugar Land, and Cypress with fast, friendly, and reliable service.</p>
@@ -137,44 +136,32 @@
   <section id="about">
     <h2>About Us</h2>
     <p class="sub">
-      At <strong>FJ Home Installation</strong>, we take pride in turning every project into a professional, precise, and hassle-free experience. 
-      Whether it’s mounting your TV perfectly, assembling furniture safely, setting up your home theater, or wiring smart devices — our goal is to deliver quality craftsmanship with attention to detail. 
-      Based in Houston, TX, we’re committed to excellent service, fair pricing, and 100% customer satisfaction.
+      At <strong>FJ Home Installation</strong>, we specialize in turning every home project into a smooth and professional experience. 
+      From mounting TVs and installing security cameras to wiring lights and assembling furniture — we do it all with care, precision, and pride. 
+      Our mission is simple: deliver top-quality service at fair prices while ensuring 100% customer satisfaction. 
+      Trusted by homeowners across the Houston area, we bring expertise, integrity, and attention to every detail.
     </p>
   </section>
 
   <!-- OUR SERVICES -->
   <section id="services">
     <h2>Our Services</h2>
-    <p class="sub">Select, book, and relax — we handle the heavy lifting with clean, safe, and code-compliant work.</p>
+    <p class="sub">We offer professional installation services across Houston and nearby areas.</p>
     <div class="grid">
-      <div class="card">
-        <h3>📺 TV Mounting</h3>
-        <p>Drywall, brick, or above fireplaces. Concealed cables available.</p>
-      </div>
-      <div class="card">
-        <h3>🪑 Furniture Assembly</h3>
-        <p>IKEA, Wayfair, Amazon & more — done safely and neatly.</p>
-      </div>
-      <div class="card">
-        <h3>🎬 Home Theater Installation</h3>
-        <p>Soundbars, speakers, projectors, and clean cable management.</p>
-      </div>
-      <div class="card">
-        <h3>⚡ Electrical Work</h3>
-        <p>Ceiling lights, outlets, smart switches & more by a pro.</p>
-      </div>
-      <div class="card">
-        <h3>🎥 Camera Setup</h3>
-        <p>Wired or Wi-Fi systems with app setup and perfect positioning.</p>
-      </div>
+      <div class="card">📺</div>
+      <div class="card">🪑</div>
+      <div class="card">🎬</div>
+      <div class="card">⚡</div>
+      <div class="card">🎥</div>
     </div>
   </section>
 
   <!-- CONTACT / FOOTER -->
   <footer>
     <p>📍 Houston • Katy • Sugar Land • Cypress & nearby areas</p>
-    <p>© 2025 FJ Home Installation | Licensed & Insured | <a href="mailto:manhal.isc@gmail.com">manhal.isc@gmail.com</a></p>
+    <p>© 2025 FJ Home Installation | Licensed & Insured | 
+      <a href="mailto:manhal.isc@gmail.com" style="color: var(--brand); text-decoration: none;">manhal.isc@gmail.com</a>
+    </p>
   </footer>
 
 </body>
