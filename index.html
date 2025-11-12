@@ -7,70 +7,106 @@
   <meta name="description" content="Professional TV mounting, furniture assembly, electrical installations, and security camera setup in Houston, Katy, Sugar Land, and Cypress. Fast, friendly, and affordable." />
   <link rel="icon" href="https://img.icons8.com/fluency/96/tv.png" />
   <style>
-    :root{
-      --brand:#0B7BFF;
-      --brand-2:#0552c7;
-      --text:#1d2433;
-      --muted:#667085;
-      --bg:#f7fbff;
-      --card:#ffffff;
-      --ring:rgba(11,123,255,.12);
-      --shadow:0 10px 30px rgba(16,24,40,.06);
-      --radius:18px;
+    :root {
+      --brand: #0B7BFF;
+      --brand-2: #0552c7;
+      --text: #1d2433;
+      --muted: #667085;
+      --bg: #f7fbff;
+      --card: #ffffff;
+      --ring: rgba(11, 123, 255, .12);
+      --shadow: 0 10px 30px rgba(16, 24, 40, .06);
+      --radius: 18px;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--text);background:#fff}
-    a{color:var(--brand);text-decoration:none}
-    img{max-width:100%;display:block}
-    .container{max-width:1100px;margin:auto;padding:28px}
-    .btn{display:inline-flex;gap:.55rem;align-items:center;background:var(--brand);color:#fff;padding:12px 18px;border-radius:14px;font-weight:600;border:0;cursor:pointer;box-shadow:0 6px 16px var(--ring)}
-    .btn:hover{background:var(--brand-2)}
-    /* Hero */
-    .hero{background:linear-gradient(180deg,#eaf4ff 0%,#ffffff 100%);padding:56px 0 10px}
-    .hero .container{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
-    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#ecf3ff;color:var(--brand);font-weight:700;font-size:.85rem}
-    h1{font-size:clamp(28px,4vw,42px);margin:10px 0 8px}
-    .lead{color:var(--muted);font-size:1.05rem;line-height:1.6}
-    .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
-    .phone{font-weight:700}
-    .hero-img{border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
-    .hero-img img{aspect-ratio:16/11;object-fit:cover;width:100%}
-    /* Blocks */
-    section{padding:18px 0}
-    .section-alt{background:var(--bg);padding:40px 0}
-    h2{font-size:clamp(22px,3vw,32px);text-align:center;margin:8px 0 8px}
-    .sub{max-width:760px;margin:8px auto 26px;color:var(--muted);text-align:center}
-    /* Services */
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
-    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid #eef2f6}
-    .card img{width:100%;height:180px;object-fit:cover}
-    .card .p{padding:16px 16px 18px}
-    .card h3{margin:0 0 8px;font-size:1.08rem}
-    .pill{display:inline-block;background:#eef5ff;color:var(--brand);font-weight:700;padding:4px 8px;border-radius:10px;font-size:.76rem}
-    .services .card{grid-column:span 6}
-    @media(min-width:860px){.services .card{grid-column:span 3}}
-    /* Gallery */
-    .gallery .card img{height:210px}
-    .gallery .card{grid-column:span 6}
-    @media(min-width:860px){.gallery .card{grid-column:span 4}}
-    /* Reviews */
-    .reviews .item{grid-column:span 12;background:#fff;border:1px solid #eef2f6;border-radius:18px;padding:20px;box-shadow:var(--shadow)}
-    @media(min-width:860px){.reviews .item{grid-column:span 4}}
-    .stars{color:#f5b50a;letter-spacing:2px;margin-bottom:10px}
-    .name{color:#0b1324;font-weight:700;margin-top:8px}
-    /* Contact */
-    .contact .wrap{display:grid;grid-template-columns:1fr;gap:18px}
-    .contact .card{padding:18px}
-    .cta-line{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-    .small{color:var(--muted);font-size:.92rem}
-    footer{padding:26px 0;text-align:center;color:var(--muted);border-top:1px solid #eef2f6;margin-top:34px}
-    .list{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
-    .list a{background:#eef5ff;padding:6px 10px;border-radius:10px}
+    * { box-sizing: border-box }
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: #fff;
+    }
+    a { color: var(--brand); text-decoration: none }
+    .container { max-width: 1100px; margin: auto; padding: 28px }
+    .btn {
+      display: inline-flex;
+      gap: .55rem;
+      align-items: center;
+      background: var(--brand);
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 14px;
+      font-weight: 600;
+      border: 0;
+      cursor: pointer;
+      box-shadow: 0 6px 16px var(--ring);
+    }
+    .btn:hover { background: var(--brand-2) }
+    .hero {
+      background: linear-gradient(180deg, #eaf4ff 0%, #ffffff 100%);
+      padding: 56px 0 10px;
+    }
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 28px;
+      align-items: center;
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #ecf3ff;
+      color: var(--brand);
+      font-weight: 700;
+      font-size: .85rem;
+    }
+    h1 { font-size: clamp(28px, 4vw, 42px); margin: 10px 0 8px }
+    .lead { color: var(--muted); font-size: 1.05rem; line-height: 1.6 }
+    .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px }
+    .phone { font-weight: 700 }
+    section { padding: 18px 0 }
+    .section-alt { background: var(--bg); padding: 40px 0 }
+    h2 { font-size: clamp(22px, 3vw, 32px); text-align: center; margin: 8px 0 8px }
+    .sub { max-width: 760px; margin: 8px auto 26px; color: var(--muted); text-align: center }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px }
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      border: 1px solid #eef2f6;
+      padding: 16px 18px;
+    }
+    .card h3 { margin: 0 0 8px; font-size: 1.08rem; color: var(--brand) }
+    .card p { font-size: 0.95rem; color: #444 }
+    .pill {
+      display: inline-block;
+      background: #eef5ff;
+      color: var(--brand);
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 10px;
+      font-size: .76rem;
+    }
+    .services .card { grid-column: span 6 }
+    @media(min-width:860px) { .services .card { grid-column: span 3 } }
+    .contact .wrap { display: grid; grid-template-columns: 1fr; gap: 18px }
+    .contact .card { padding: 18px }
+    .cta-line { display: flex; gap: 12px; align-items: center; flex-wrap: wrap }
+    .small { color: var(--muted); font-size: .92rem }
+    footer {
+      padding: 26px 0;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid #eef2f6;
+      margin-top: 34px;
+    }
+    .list { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center }
+    .list a { background: #eef5ff; padding: 6px 10px; border-radius: 10px }
   </style>
 </head>
 <body>
-
-  <!-- HERO -->
   <header class="hero">
     <div class="container">
       <div>
@@ -83,157 +119,49 @@
         </div>
         <p class="small" style="margin-top:8px">Mon–Sat 8:00 AM – 7:00 PM • Licensed & insured</p>
       </div>
-      <div class="hero-img">
-        <img alt="Technician professionally mounting a large TV on drywall" loading="lazy"
-             src="https://images.unsplash.com/photo-1583225272834-05f728621f08?auto=format&fit=crop&w=1400&q=70" />
-      </div>
     </div>
   </header>
 
-  <!-- SERVICES -->
   <section class="section-alt">
     <div class="container services">
       <h2>Our Services</h2>
       <p class="sub">Select, book, and relax — we’ll handle the heavy lifting with clean, safe, and code-compliant work.</p>
 
       <div class="grid">
-        <!-- TV Mounting -->
         <article class="card">
-          <img alt="Installer leveling and mounting a flat-screen TV" loading="lazy"
-               src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=70" />
-          <div class="p">
-            <h3>TV Mounting</h3>
-            <p class="small">Drywall, brick, or above fireplaces. Concealed cables available.</p>
-            <span class="pill">Most popular</span>
-          </div>
+          <h3>TV Mounting</h3>
+          <p>Drywall, brick, or above fireplaces. Concealed cables available.</p>
+          <span class="pill">Most popular</span>
         </article>
 
-        <!-- Furniture Assembly -->
         <article class="card">
-          <img alt="Technician assembling flat-pack furniture" loading="lazy"
-               src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1200&q=70" />
-          <div class="p">
-            <h3>Furniture Assembly</h3>
-            <p class="small">IKEA, Wayfair, Amazon & more — done safely and neatly.</p>
-          </div>
+          <h3>Furniture Assembly</h3>
+          <p>IKEA, Wayfair, Amazon & more — done safely and neatly.</p>
         </article>
 
-        <!-- Home Theater -->
         <article class="card">
-          <img alt="Home theater speakers and TV installed in a modern living room" loading="lazy"
-               src="https://source.unsplash.com/1200x800/?home-theater,living-room" />
-          <div class="p">
-            <h3>Home Theater Installation</h3>
-            <p class="small">Soundbars, speakers, projectors, and clean cable management.</p>
-          </div>
+          <h3>Home Theater Installation</h3>
+          <p>Soundbars, speakers, projectors, and clean cable management.</p>
         </article>
 
-        <!-- Electrical Work -->
         <article class="card">
-          <img alt="Electrician installing a light fixture with proper safety" loading="lazy"
-               src="https://source.unsplash.com/1200x800/?electrician,lighting,installation" />
-          <div class="p">
-            <h3>Electrical Work</h3>
-            <p class="small">Ceiling lights, outlets, smart switches & more by a pro.</p>
-          </div>
+          <h3>Electrical Work</h3>
+          <p>Ceiling lights, outlets, smart switches & more by a pro.</p>
         </article>
 
-        <!-- Camera Setup -->
         <article class="card">
-          <img alt="Technician installing an outdoor security camera" loading="lazy"
-               src="https://source.unsplash.com/1200x800/?security-camera,installation" />
-          <div class="p">
-            <h3>Camera Setup</h3>
-            <p class="small">Wired or Wi-Fi systems with app setup and positioning.</p>
-          </div>
+          <h3>Camera Setup</h3>
+          <p>Wired or Wi-Fi systems with app setup and positioning.</p>
         </article>
 
-        <!-- Houston Homes -->
         <article class="card">
-          <img alt="Houston home exterior at sunset" loading="lazy"
-               src="https://source.unsplash.com/1200x800/?houston,house" />
-          <div class="p">
-            <h3>Houston Homes</h3>
-            <p class="small">Proudly serving Houston and nearby cities since day one.</p>
-          </div>
+          <h3>Houston Homes</h3>
+          <p>Proudly serving Houston and nearby cities since day one.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- GALLERY -->
-  <section>
-    <div class="container gallery">
-      <h2>Our Work Gallery</h2>
-      <p class="sub">A few examples of the clean, professional installations we deliver.</p>
-
-      <div class="grid">
-        <article class="card">
-          <img alt="Mounted TV with hidden cables in a bright living room" loading="lazy"
-               src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1400&q=70" />
-          <div class="p"><h3>TV Mounting</h3></div>
-        </article>
-
-        <article class="card">
-          <img alt="Dining table and chairs assembled and placed neatly" loading="lazy"
-               src="https://images.unsplash.com/photo-1567016552902-47e8f87b0f3b?auto=format&fit=crop&w=1400&q=70" />
-          <div class="p"><h3>Furniture Assembly</h3></div>
-        </article>
-
-        <article class="card">
-          <img alt="Home theater setup with immersive audio" loading="lazy"
-               src="https://source.unsplash.com/1400x900/?home-theater,media-room" />
-          <div class="p"><h3>Home Theater</h3></div>
-        </article>
-
-        <article class="card">
-          <img alt="New ceiling lights installed and tested by an electrician" loading="lazy"
-               src="https://source.unsplash.com/1400x900/?electrician,ceiling-light" />
-          <div class="p"><h3>Electrical Work</h3></div>
-        </article>
-
-        <article class="card">
-          <img alt="Outdoor bullet camera mounted under eaves" loading="lazy"
-               src="https://source.unsplash.com/1400x900/?security-camera,cctv" />
-          <div class="p"><h3>Camera Setup</h3></div>
-        </article>
-
-        <article class="card">
-          <img alt="Modern Houston neighborhood street" loading="lazy"
-               src="https://source.unsplash.com/1400x900/?houston,neighborhood" />
-          <div class="p"><h3>Houston Homes</h3></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- REVIEWS -->
-  <section class="section-alt">
-    <div class="container">
-      <h2>Customer Reviews</h2>
-      <p class="sub">Real feedback from happy customers about our quality and care.</p>
-
-      <div class="grid reviews">
-        <div class="item">
-          <div class="stars">★★★★★</div>
-          <p>“Manhal and his team mounted two TVs and set up our cameras perfectly. Fast, friendly, and super clean work!”</p>
-          <div class="name">— Sarah L., Houston, TX</div>
-        </div>
-        <div class="item">
-          <div class="stars">★★★★★</div>
-          <p>“IKEA wardrobe assembled in no time. Everything was sturdy and aligned. Highly recommend FJ Home Installation.”</p>
-          <div class="name">— Ahmed R., Katy, TX</div>
-        </div>
-        <div class="item">
-          <div class="stars">★★★★★</div>
-          <p>“They installed new ceiling lights and 4 cameras for my shop. Professional, neat, and very fair pricing.”</p>
-          <div class="name">— Jessica T., Cypress, TX</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
   <section>
     <div class="container contact">
       <h2>Get a Free Quote</h2>
@@ -241,31 +169,25 @@
 
       <div class="wrap">
         <article class="card">
-          <div class="p">
-            <h3>Call / Text</h3>
-            <p class="cta-line"><a class="btn" href="tel:+17139419647">📞 (713) 941-9647</a></p>
-            <p class="small">Hours: Mon–Sat 8:00 AM – 7:00 PM</p>
-          </div>
+          <h3>Call / Text</h3>
+          <p class="cta-line"><a class="btn" href="tel:+17139419647">📞 (713) 941-9647</a></p>
+          <p class="small">Hours: Mon–Sat 8:00 AM – 7:00 PM</p>
         </article>
 
         <article class="card">
-          <div class="p">
-            <h3>Email</h3>
-            <p class="cta-line"><a class="btn" style="background:#14a44d" href="mailto:manhal.isc@gmail.com">✉️ manhal.isc@gmail.com</a></p>
-            <p class="small">We usually reply the same day.</p>
-          </div>
+          <h3>Email</h3>
+          <p class="cta-line"><a class="btn" style="background:#14a44d" href="mailto:manhal.isc@gmail.com">✉️ manhal.isc@gmail.com</a></p>
+          <p class="small">We usually reply the same day.</p>
         </article>
 
         <article class="card">
-          <div class="p">
-            <h3>Service Areas</h3>
-            <p class="small">Houston • Katy • Sugar Land • Cypress • and nearby</p>
-            <div class="list">
-              <span class="pill">TV Mounting</span>
-              <span class="pill">Assembly</span>
-              <span class="pill">Electrical</span>
-              <span class="pill">Cameras</span>
-            </div>
+          <h3>Service Areas</h3>
+          <p class="small">Houston • Katy • Sugar Land • Cypress • and nearby</p>
+          <div class="list">
+            <span class="pill">TV Mounting</span>
+            <span class="pill">Assembly</span>
+            <span class="pill">Electrical</span>
+            <span class="pill">Cameras</span>
           </div>
         </article>
       </div>
