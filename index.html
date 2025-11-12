@@ -4,209 +4,247 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FJ Home Installation | TV Mounting • Assembly • Electrical • Cameras</title>
-  <meta name="description" content="Professional TV mounting, furniture assembly, electrical installations, and security camera setup in Houston, Katy, Sugar Land, and Cypress. Fast, friendly, and affordable." />
+  <meta name="description" content="Professional TV mounting, furniture assembly, electrical installations, and security camera setup in Houston, Katy, Sugar Land, and Cypress. Fast, friendly, and reliable home services." />
   <link rel="icon" href="https://img.icons8.com/fluency/96/tv.png" />
   <style>
     :root {
-      --brand: #0B7BFF;
-      --brand-2: #0552c7;
+      --brand: #0056b3;
+      --brand-2: #003d82;
       --text: #1d2433;
       --muted: #667085;
-      --bg: #f7fbff;
+      --bg: #f7f9fc;
       --card: #ffffff;
-      --ring: rgba(11, 123, 255, .12);
-      --shadow: 0 10px 30px rgba(16, 24, 40, .06);
+      --shadow: 0 8px 24px rgba(0,0,0,.06);
       --radius: 18px;
     }
-    * { box-sizing: border-box }
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, sans-serif;
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Inter", system-ui, sans-serif;
       color: var(--text);
       background: #fff;
+      line-height: 1.6;
     }
-    a { color: var(--brand); text-decoration: none }
-    .container { max-width: 1100px; margin: auto; padding: 28px }
+    a { color: var(--brand); text-decoration: none; }
+
+    .container { max-width: 1100px; margin: auto; padding: 32px 20px; }
+
+    /* Buttons */
     .btn {
       display: inline-flex;
-      gap: .55rem;
       align-items: center;
+      justify-content: center;
+      gap: 8px;
       background: var(--brand);
       color: #fff;
-      padding: 12px 18px;
+      padding: 12px 20px;
       border-radius: 14px;
       font-weight: 600;
-      border: 0;
-      cursor: pointer;
-      box-shadow: 0 6px 16px var(--ring);
+      border: none;
+      box-shadow: 0 6px 16px rgba(0, 86, 179, 0.25);
+      transition: all 0.25s ease;
     }
-    .btn:hover { background: var(--brand-2) }
+    .btn:hover { background: var(--brand-2); transform: translateY(-2px); }
+
+    /* Hero Section */
     .hero {
-      background: linear-gradient(180deg, #eaf4ff 0%, #ffffff 100%);
-      padding: 56px 0 10px;
-    }
-    .hero .container {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 28px;
-      align-items: center;
+      background: linear-gradient(180deg, #eaf2ff 0%, #ffffff 100%);
+      padding: 80px 0 50px;
+      text-align: left;
     }
     .badge {
       display: inline-block;
-      padding: 6px 10px;
+      padding: 6px 12px;
       border-radius: 999px;
-      background: #ecf3ff;
+      background: #dfeaff;
       color: var(--brand);
       font-weight: 700;
-      font-size: .85rem;
+      font-size: .9rem;
+      margin-bottom: 12px;
     }
-    h1 { font-size: clamp(28px, 4vw, 42px); margin: 10px 0 8px }
-    .lead { color: var(--muted); font-size: 1.05rem; line-height: 1.6 }
-    .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px }
-    .phone { font-weight: 700 }
-    section { padding: 18px 0 }
-    .section-alt { background: var(--bg); padding: 40px 0 }
-    h2 { font-size: clamp(22px, 3vw, 32px); text-align: center; margin: 8px 0 8px }
-    .sub { max-width: 760px; margin: 8px auto 26px; color: var(--muted); text-align: center }
-    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px }
+    h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      margin-bottom: 12px;
+      color: var(--brand-2);
+    }
+    .lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin-bottom: 24px;
+    }
+    .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    /* Section Titles */
+    section { padding: 60px 0; }
+    h2 {
+      font-size: clamp(26px, 3vw, 34px);
+      text-align: center;
+      color: var(--brand-2);
+      margin-bottom: 12px;
+    }
+    .sub {
+      text-align: center;
+      color: var(--muted);
+      max-width: 760px;
+      margin: 0 auto 36px;
+    }
+
+    /* About Section */
+    .about {
+      background: var(--bg);
+    }
+    .about .content {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.05rem;
+      color: #444;
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    /* Services */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
     .card {
       background: var(--card);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      overflow: hidden;
-      border: 1px solid #eef2f6;
-      padding: 16px 18px;
+      padding: 24px;
+      transition: all 0.25s ease;
     }
-    .card h3 { margin: 0 0 8px; font-size: 1.08rem; color: var(--brand) }
-    .card p { font-size: 0.95rem; color: #444 }
-    .pill {
-      display: inline-block;
-      background: #eef5ff;
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 26px rgba(0,0,0,.08);
+    }
+    .card h3 {
       color: var(--brand);
-      font-weight: 700;
-      padding: 4px 8px;
-      border-radius: 10px;
-      font-size: .76rem;
+      margin-bottom: 8px;
+      font-size: 1.15rem;
     }
-    .services .card { grid-column: span 6 }
-    @media(min-width:860px) { .services .card { grid-column: span 3 } }
-    .contact .wrap { display: grid; grid-template-columns: 1fr; gap: 18px }
-    .contact .card { padding: 18px }
-    .cta-line { display: flex; gap: 12px; align-items: center; flex-wrap: wrap }
-    .small { color: var(--muted); font-size: .92rem }
+    .card p { color: #444; font-size: .96rem; }
+
+    /* Contact */
+    .contact .card { text-align: center; }
+    .cta-line { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+    .small { color: var(--muted); font-size: .9rem; }
+
     footer {
-      padding: 26px 0;
+      background: var(--bg);
       text-align: center;
+      padding: 30px 10px;
       color: var(--muted);
-      border-top: 1px solid #eef2f6;
-      margin-top: 34px;
+      border-top: 1px solid #e5e9f0;
+      font-size: .95rem;
     }
-    .list { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center }
-    .list a { background: #eef5ff; padding: 6px 10px; border-radius: 10px }
+    .footer-links { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+    .footer-links a {
+      background: #eaf2ff;
+      padding: 6px 12px;
+      border-radius: 10px;
+      color: var(--brand);
+    }
   </style>
 </head>
 <body>
+  <!-- HERO -->
   <header class="hero">
     <div class="container">
-      <div>
-        <span class="badge">Houston • Katy • Sugar Land • Cypress</span>
-        <h1>FJ Home Installation</h1>
-        <p class="lead">Professional <b>TV mounting</b>, <b>furniture assembly</b>, <b>electrical installations</b>, and <b>security camera setup</b>. Fast, friendly, and affordable.</p>
-        <div class="hero-cta">
-          <a class="btn" href="tel:+17139419647">📞 Call Now <span class="phone">(713) 941-9647</span></a>
-          <a class="btn" style="background:#14a44d" href="mailto:manhal.isc@gmail.com">✉️ manhal.isc@gmail.com</a>
-        </div>
-        <p class="small" style="margin-top:8px">Mon–Sat 8:00 AM – 7:00 PM • Licensed & insured</p>
+      <span class="badge">Houston • Katy • Sugar Land • Cypress</span>
+      <h1>FJ Home Installation</h1>
+      <p class="lead">Professional TV mounting, furniture assembly, electrical installations, and security camera setup. We deliver quality, reliability, and care — every time.</p>
+      <div class="hero-cta">
+        <a class="btn" href="tel:+17139419647">📞 Call Now (713) 941-9647</a>
+        <a class="btn" style="background:#14a44d" href="mailto:manhal.isc@gmail.com">✉️ manhal.isc@gmail.com</a>
       </div>
+      <p class="small" style="margin-top:10px;">Mon–Sat  8 AM – 7 PM  •  Licensed & Insured</p>
     </div>
   </header>
 
-  <section class="section-alt">
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <div class="content">
+        <p><strong>FJ Home Installation</strong> is a trusted Houston-based company specializing in professional TV mounting, furniture assembly, electrical installations, and camera setup. Our goal is simple — to make your home or office installation projects easy, safe, and perfectly done the first time.</p>
+        <p>We take pride in our punctuality, attention to detail, and customer satisfaction. Every project, big or small, is handled with professionalism and a smile. Serving Houston, Katy, Sugar Land, and Cypress, we’re here to bring your space to life.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section>
     <div class="container services">
       <h2>Our Services</h2>
-      <p class="sub">Select, book, and relax — we’ll handle the heavy lifting with clean, safe, and code-compliant work.</p>
-
+      <p class="sub">Select, book, and relax — we handle the heavy lifting with clean, safe, and code-compliant work.</p>
       <div class="grid">
-        <article class="card">
+        <div class="card">
           <h3>TV Mounting</h3>
           <p>Drywall, brick, or above fireplaces. Concealed cables available.</p>
-          <span class="pill">Most popular</span>
-        </article>
-
-        <article class="card">
+        </div>
+        <div class="card">
           <h3>Furniture Assembly</h3>
           <p>IKEA, Wayfair, Amazon & more — done safely and neatly.</p>
-        </article>
-
-        <article class="card">
+        </div>
+        <div class="card">
           <h3>Home Theater Installation</h3>
           <p>Soundbars, speakers, projectors, and clean cable management.</p>
-        </article>
-
-        <article class="card">
+        </div>
+        <div class="card">
           <h3>Electrical Work</h3>
           <p>Ceiling lights, outlets, smart switches & more by a pro.</p>
-        </article>
-
-        <article class="card">
+        </div>
+        <div class="card">
           <h3>Camera Setup</h3>
-          <p>Wired or Wi-Fi systems with app setup and positioning.</p>
-        </article>
-
-        <article class="card">
-          <h3>Houston Homes</h3>
-          <p>Proudly serving Houston and nearby cities since day one.</p>
-        </article>
+          <p>Wired or Wi-Fi systems with app setup and perfect positioning.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section>
-    <div class="container contact">
+  <!-- CONTACT -->
+  <section class="contact" style="background:var(--bg);">
+    <div class="container">
       <h2>Get a Free Quote</h2>
       <p class="sub">Tell us what you need. We’ll respond quickly with pricing and availability.</p>
-
-      <div class="wrap">
-        <article class="card">
+      <div class="grid">
+        <div class="card">
           <h3>Call / Text</h3>
-          <p class="cta-line"><a class="btn" href="tel:+17139419647">📞 (713) 941-9647</a></p>
-          <p class="small">Hours: Mon–Sat 8:00 AM – 7:00 PM</p>
-        </article>
-
-        <article class="card">
-          <h3>Email</h3>
-          <p class="cta-line"><a class="btn" style="background:#14a44d" href="mailto:manhal.isc@gmail.com">✉️ manhal.isc@gmail.com</a></p>
-          <p class="small">We usually reply the same day.</p>
-        </article>
-
-        <article class="card">
-          <h3>Service Areas</h3>
-          <p class="small">Houston • Katy • Sugar Land • Cypress • and nearby</p>
-          <div class="list">
-            <span class="pill">TV Mounting</span>
-            <span class="pill">Assembly</span>
-            <span class="pill">Electrical</span>
-            <span class="pill">Cameras</span>
+          <div class="cta-line">
+            <a class="btn" href="tel:+17139419647">📞 (713) 941-9647</a>
           </div>
-        </article>
+          <p class="small">Mon–Sat  8 AM – 7 PM</p>
+        </div>
+        <div class="card">
+          <h3>Email</h3>
+          <div class="cta-line">
+            <a class="btn" style="background:#14a44d" href="mailto:manhal.isc@gmail.com">✉️ manhal.isc@gmail.com</a>
+          </div>
+          <p class="small">We usually reply the same day.</p>
+        </div>
+        <div class="card">
+          <h3>Service Areas</h3>
+          <p class="small">Houston • Katy • Sugar Land • Cypress • Nearby Cities</p>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <div class="container">
-      <div class="list" style="margin-bottom:8px">
-        <a href="tel:+17139419647">Call</a>
-        <a href="mailto:manhal.isc@gmail.com">Email</a>
-        <a href="https://fjhomeinstallation.com">fjhomeinstallation.com</a>
-      </div>
-      © <span id="y"></span> FJ Home Installation • Houston, TX
+    <div class="footer-links">
+      <a href="tel:+17139419647">Call</a>
+      <a href="mailto:manhal.isc@gmail.com">Email</a>
+      <a href="https://fjhomeinstallation.com">Website</a>
     </div>
+    © <span id="y"></span> FJ Home Installation • Houston, TX
   </footer>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
