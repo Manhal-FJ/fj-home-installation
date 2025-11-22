@@ -56,51 +56,37 @@ h2 { color: var(--brand); margin-bottom: 15px; }
 .card img { width: 60px; }
 .card:hover { transform: scale(1.05); }
 
-/* Pricing */
-#pricing { background: #fff; }
-.pricing-card {
-  max-width: 700px;
-  margin: 30px auto;
-  background: var(--card-bg);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px var(--shadow);
-}
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-th, td {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-tr:hover { background: #f4f4f4; }
-
-/* Footer */
-footer {
-  background: #eef3ff;
-  padding: 20px;
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  .card { width: 100%; }
-  .pricing-card { width: 90%; }
-}
+/* ===== Pricing Section (Professional Layout) ===== */
 #pricing {
   background: #f8f9ff;
   padding: 60px 20px;
   text-align: center;
 }
 
+.price-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
 .price-box {
-  background: white;
-  width: 90%;
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 20px;
+  background: #fff;
+  width: 45%;
+  padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.price-box:hover {
+  transform: translateY(-5px);
+}
+
+.price-box h3 {
+  color: var(--brand);
+  margin-bottom: 12px;
+  font-size: 1.3rem;
 }
 
 .price-box table {
@@ -108,15 +94,36 @@ footer {
   border-collapse: collapse;
 }
 
-.price-box th, .price-box td {
+.price-box th,
+.price-box td {
   padding: 10px;
   border-bottom: 1px solid #ddd;
 }
 
-.price-box th {
-  background: #eef2ff;
+.price-box th { background: #eef2ff; }
+.price-box tr:last-child td { border: none; }
+
+/* Book Service Button */
+.book-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 20px;
+  background: var(--brand);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
   font-weight: bold;
+  transition: 0.3s;
 }
+.book-btn:hover { background: #0032a9; }
+
+/* 📱 Mobile Fix */
+@media (max-width: 768px) {
+  .price-box {
+    width: 100%;
+  }
+}
+
 
 .price-box tr:last-child td {
   border: none;
