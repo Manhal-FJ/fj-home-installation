@@ -87,3 +87,37 @@ footer {
   .card { width: 100%; }
   .pricing-card { width: 90%; }
 }
+#pricing {
+  background: #f8f9ff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.price-box {
+  background: white;
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.price-box table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.price-box th, .price-box td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.price-box th {
+  background: #eef2ff;
+  font-weight: bold;
+}
+
+.price-box tr:last-child td {
+  border: none;
+}
