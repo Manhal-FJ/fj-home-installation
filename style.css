@@ -249,3 +249,31 @@ input, select {
 }
 
 .btn-book:hover { background: #ff7600; }
+
+#booking {
+  background: #eef3ff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#booking input, #booking select {
+  padding: 10px;
+  width: 300px;
+  margin: 8px auto;
+  display: block;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.btn-book {
+  background: #0044cc;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+}
+
+.btn-book:hover { background: #003499; }
+
