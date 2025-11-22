@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FJ Home Installation | Houston TX</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FJ Home Installation | TV Mounting & Furniture Assembly in Houston</title>
+  <meta name="description" content="Professional TV mounting, furniture assembly, electrical work, and security camera installation in Houston, Texas. Same-day service available." />
+  <meta name="keywords" content="TV mounting Houston, furniture assembly Houston, handyman Houston, IKEA installation Houston, security camera installation Houston" />
+
   <style>
     :root {
       --brand: #0044cc;
@@ -25,25 +28,16 @@
     header {
       text-align: center;
       background: linear-gradient(180deg, #e9f0ff, #f9fbff);
-      padding: 60px 20px;
+      padding: 70px 20px;
     }
 
     header h1 {
-      font-size: 2.5em;
+      font-size: 2.8em;
       color: var(--brand);
       margin-bottom: 15px;
     }
 
-    header p {
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 1.1em;
-    }
-
-    .btn-container {
-      margin-top: 20px;
-    }
-
+    .btn-container { margin-top: 20px; }
     .btn {
       display: inline-block;
       margin: 8px;
@@ -53,51 +47,52 @@
       text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
-      transition: background 0.3s ease;
+      transition: 0.3s ease;
     }
+    .btn:hover { background-color: #002f8a; }
 
-    .btn:hover {
-      background-color: #002f8a;
-    }
-
+    /* FIX – more vertical space */
     section {
-      padding: 60px 20px;
+      padding-top: 80px;
+      padding-bottom: 80px;
       text-align: center;
     }
 
-    h2 {
-      color: var(--brand);
-      margin-bottom: 10px;
+    /* About section center fix */
+    #about, #services {
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    p.sub {
-      max-width: 700px;
-      margin: 0 auto 40px;
-      color: #555;
-    }
-
-    /* Grid layout */
+    /* Services Grid */
     .grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 25px;
+      margin-top: 40px;
     }
 
-    /* Service Cards with icon and label */
     .card {
       background: var(--card-bg);
       box-shadow: 0 3px 8px var(--shadow);
       border-radius: 12px;
-      width: 250px;
-      height: 100px;
+      width: 240px;
+      height: 140px; /* FIX height */
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 12px;
-      font-size: 1.5rem;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      gap: 8px;
       cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card img {
+      width: 55px;
+      height: 55px;
+      object-fit: cover;
+      border-radius: 6px;
     }
 
     .card span {
@@ -120,98 +115,61 @@
     }
 
     @media (max-width: 768px) {
-      .grid {
-        flex-direction: column;
-        align-items: center;
-      }
+      .grid { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
+
 <body>
 
   <!-- HEADER -->
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FJ Home Installation | TV Mounting & Furniture Assembly in Houston, Texas</title>
+  <header>
+    <h1>FJ Home Installation</h1>
+    <p><strong>Professional TV mounting, furniture assembly, electrical work & camera installations</strong></p>
+    <div class="btn-container">
+      <a href="tel:7139419647" class="btn">📞 Call (713) 941-9647</a>
+      <a href="mailto:fjhomeinstallation@gmail.com" class="btn" style="background-color:#2ea44f;">✉️ Email Us</a>
+    </div>
+  </header>
 
-  <!-- SEO Tags -->
-  <meta name="description" content="Professional TV mounting, furniture assembly, electrical installations, and security camera setup — serving Houston and nearby areas. Fast & affordable service.">
-  <meta name="keywords" content="TV mounting Houston, furniture assembly Houston, handyman Katy TX, IKEA assembly Richmond TX, bunk bed installation, home installation near me, security camera installation Houston">
-  <meta name="author" content="FJ Home Installation">
-
-  <!-- Open Graph (Social Media Preview) -->
-  <meta property="og:title" content="FJ Home Installation – Trusted in Houston for 4+ Years">
-  <meta property="og:description" content="TV mounting, furniture assembly, electrical work & camera setup. Licensed & Insured – Call now: (713) 941-9647">
-  <meta property="og:image" content="https://fjhomeinstallation.com/images/fjhome.jpg"> <!-- (Upload image later) -->
-  <meta property="og:type" content="business">
-  <meta property="og:url" content="https://fjhomeinstallation.com">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
-  <!-- Mobile Phone Click-to-Call -->
-  <meta name="format-detection" content="telephone=yes">
-
-  <!-- CSS STYLES BELOW (same as your current) -->
-  <style>
-    /* your existing CSS here… (unchanged) */
-  </style>
-</head>
-
-
-  <!-- ABOUT US -->
+  <!-- ABOUT -->
   <section id="about">
     <h2>About Us</h2>
-    <p class="sub">
-      At <strong>FJ Home Installation</strong>, we specialize in turning every home project into a smooth and professional experience. 
-      From mounting TVs and installing security cameras to wiring lights and assembling furniture — we do it all with care, precision, and pride. 
-      Our mission is simple: deliver top-quality service at fair prices while ensuring 100% customer satisfaction. 
-      Trusted by homeowners across the Houston area, we bring expertise, integrity, and attention to every detail.
-    </p>
+    <p>Trusted by homeowners across Houston — fast, clean & professional installation services for over 4 years.</p>
   </section>
 
-  <!-- OUR SERVICES -->
+  <!-- SERVICES -->
   <section id="services">
     <h2>Our Services</h2>
     <p class="sub">We offer professional installation services across Houston and nearby areas.</p>
+
     <div class="grid">
-
-  <div class="card">
-    <img src="images/tv-mounting.png" alt="TV Mounting Service in Houston" style="width:60px; height:60px;">
-    <span>TV Mounting</span>
-  </div>
-
-  <div class="card">
-    <img src="images/furniture-assembly.png" alt="IKEA Furniture Assembly Houston" style="width:60px; height:60px;">
-    <span>Furniture Assembly</span>
-  </div>
-
-  <div class="card">
-    <img src="images/home-install-services.png" alt="Home Installation Services Houston" style="width:60px; height:60px;">
-    <span>Home Theater</span>
-  </div>
-
-  <div class="card">
-    <img src="images/electrical-work.png" alt="Electrical Work Installation" style="width:60px; height:60px;">
-    <span>Electrical Work</span>
-  </div>
-
-  <div class="card">
-    <img src="images/camera-install.png" alt="Security Camera Installation Houston" style="width:60px; height:60px;">
-    <span>Camera Setup</span>
-  </div>
-
-</div>
-
+      <div class="card">
+        <img src="images/tv-mounting.png" alt="TV Mounting Houston" />
+        <span>TV Mounting</span>
+      </div>
+      <div class="card">
+        <img src="images/home-install-services.png" alt="Furniture Assembly Houston" />
+        <span>Furniture Assembly</span>
+      </div>
+      <div class="card">
+        <img src="images/home-theater.png" alt="Home Theater Installation Houston" />
+        <span>Home Theater</span>
+      </div>
+      <div class="card">
+        <img src="images/electrical-work.png" alt="Electrical Installation Houston" />
+        <span>Electrical Work</span>
+      </div>
+      <div class="card">
+        <img src="images/camera-install.png" alt="Security Camera Setup Houston" />
+        <span>Camera Setup</span>
+      </div>
+    </div>
   </section>
 
-  <!-- CONTACT / FOOTER -->
   <footer>
     <p>📍 Houston and surrounding areas</p>
-    <p>© 2025 FJ Home Installation | Licensed & Insured | 
-      <a href="mailto:fjhomeinstallation@gmail.com" style="color: var(--brand); text-decoration: none;">fjhomeinstallation@gmail.com</a>
-    </p>
+    <p>© 2025 FJ Home Installation | Licensed & Insured | fjhomeinstallation@gmail.com</p>
   </footer>
 
 </body>
