@@ -1,191 +1,89 @@
 :root {
   --brand: #0044cc;
-  --light-bg: #f9fbff;
+  --bg: #f9fbff;
   --text: #333;
-  --card-bg: #ffffff;
+  --card-bg: white;
   --shadow: rgba(0,0,0,0.08);
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  color: var(--text);
-  background-color: var(--light-bg);
+  font-family: "Segoe UI", Tahoma, sans-serif;
   margin: 0;
-  padding: 0;
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.6;
 }
 
-/* HEADER */
+/* Header */
 header {
   text-align: center;
+  padding: 60px 20px;
   background: linear-gradient(180deg, #e9f0ff, #f9fbff);
-  padding: 60px 20px;
 }
-
-header h1 {
-  font-size: 2.5em;
-  color: var(--brand);
-  margin-bottom: 15px;
-}
-
-header p {
-  max-width: 700px;
-  margin: auto;
-  font-size: 1.1em;
-}
-
-.btn-container {
-  margin-top: 20px;
-}
-
+header h1 { color: var(--brand); font-size: 2.4rem; }
 .btn {
-  display: inline-block;
-  margin: 8px;
-  padding: 12px 24px;
-  background-color: var(--brand);
+  background: var(--brand);
   color: white;
-  text-decoration: none;
+  padding: 12px 20px;
   border-radius: 8px;
+  text-decoration: none;
   font-weight: bold;
-  transition: 0.3s ease;
+  display: inline-block;
 }
+.email-btn { background: #2ea44f; }
+.btn:hover { opacity: 0.8; }
 
-.email-btn {
-  background-color: #2ea44f;
-}
+/* Sections */
+section { padding: 60px 20px; text-align: center; }
+h2 { color: var(--brand); margin-bottom: 15px; }
+.sub { max-width: 700px; margin: 0 auto; }
 
-.btn:hover {
-  filter: brightness(0.8);
-}
-
-/* SECTION */
-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-h2 {
-  color: var(--brand);
-  margin-bottom: 10px;
-}
-
-p.sub {
-  max-width: 700px;
-  margin: auto;
-  color: #555;
-}
-
-/* GRID SERVICE CARDS */
+/* Services */
 .grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 25px;
-  margin-top: 30px;
+  gap: 20px;
 }
-
 .card {
-  background: var(--card-bg);
-  box-shadow: 0 3px 8px var(--shadow);
-  border-radius: 12px;
-  width: 250px;
-  padding: 15px;
-  text-align: center;
-  transition: 0.3s ease;
-}
-
-.card img {
-  width: 100%;
-  max-height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.card span {
-  font-weight: bold;
-  color: var(--brand);
-  display: block;
-  margin-top: 8px;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 7px 18px rgba(0, 68, 204, 0.2);
-}
-
-/* FOOTER */
-footer {
-  background: #eef3ff;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.95em;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .grid {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-/* Pricing Section */
-#pricing {
-  padding: 70px 20px;
-  background: #f5f7ff;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 2.2rem;
-  color: #0044cc;
-  margin-bottom: 10px;
-}
-
-.price-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.service-card {
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px var(--shadow);
+  transition: 0.2s;
+}
+.card img { width: 60px; }
+.card:hover { transform: scale(1.05); }
+
+/* Pricing */
+#pricing { background: #fff; }
+.pricing-card {
+  max-width: 700px;
+  margin: 30px auto;
+  background: var(--card-bg);
   padding: 20px;
-  transition: 0.3s;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px var(--shadow);
 }
-
-.service-card:hover {
-  transform: scale(1.03);
-}
-
-.service-card table {
+table {
   width: 100%;
   border-collapse: collapse;
 }
-
-.service-card th, .service-card td {
+th, td {
   padding: 10px;
   border-bottom: 1px solid #ddd;
 }
+tr:hover { background: #f4f4f4; }
 
-.service-card th {
-  background: #0044cc;
-  color: white;
+/* Footer */
+footer {
+  background: #eef3ff;
+  padding: 20px;
+  text-align: center;
 }
 
-.btn-large {
-  display: inline-block;
-  padding: 15px 25px;
-  background: #00a32a;
-  color: white;
-  font-size: 1.2rem;
-  border-radius: 8px;
-  text-decoration: none;
-  margin-top: 30px;
-}
-
-.btn-large:hover {
-  background: #00701b;
+@media (max-width: 768px) {
+  .card { width: 100%; }
+  .pricing-card { width: 90%; }
 }
