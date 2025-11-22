@@ -193,3 +193,21 @@ tr:hover {
 .book-btn:hover {
   background: #ff7600;
 }
+/* Footer Fix */
+footer {
+  text-align: center;      /* Center the content */
+  background: #eef3ff;     /* Light background (same as before) */
+  padding: 30px 20px;      /* Add spacing */
+  font-size: 14px;
+  color: #444;             /* Softer text color */
+}
+
+footer a {
+  color: #0044cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
