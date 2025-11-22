@@ -128,3 +128,68 @@ h2 { color: var(--brand); margin-bottom: 15px; }
 .price-box tr:last-child td {
   border: none;
 }
+/* --- PROFESSIONAL PRICING DESIGN --- */
+.pricing-section {
+  background: linear-gradient(180deg, #f8faff, #ffffff);
+  padding: 80px 20px;
+}
+
+.price-box {
+  background: white;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.price-box:hover {
+  transform: scale(1.02);
+}
+
+.price-title {
+  font-size: 1.6rem;
+  color: var(--brand);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.05rem;
+}
+
+th {
+  background: #e9f0ff;
+  color: var(--brand);
+  padding: 12px;
+  font-weight: bold;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+  background: #f5f7ff;
+}
+
+/* --- BOOK NOW BUTTON --- */
+.book-btn {
+  display: inline-block;
+  background: #ff9800;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.book-btn:hover {
+  background: #ff7600;
+}
