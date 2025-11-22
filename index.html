@@ -126,12 +126,12 @@
 
 </section>
 
-  <!-- BOOKING SECTION (Place this BEFORE the footer) -->
+<!-- BOOKING SECTION -->
 <section id="booking">
   <h2>📅 Book Your Service</h2>
   <p>Send your request by WhatsApp or email — we’ll confirm shortly.</p>
 
-  <form id="bookingForm">
+  <form target="_blank">
     <div class="form-group">
       <label>Your Name*</label>
       <input type="text" id="name" required placeholder="John Doe">
@@ -144,22 +144,26 @@
 
     <div class="form-group">
       <label>Select Service*</label>
-      <select id="service" onchange="updateOptions()" required>
+      <select id="service" required onchange="updateDetails()">
         <option value="">-- Choose --</option>
-        <option value="tv">TV Mounting</option>
-        <option value="furniture">Furniture Assembly</option>
-        <option value="electric">Electrical Installation</option>
-        <option value="camera">Security Camera Installation</option>
-        <option value="theater">Home Theater Setup</option>
+        <option value="TV Mounting">TV Mounting</option>
+        <option value="Furniture Assembly">Furniture Assembly</option>
+        <option value="Electrical Installation">Electrical Installation</option>
+        <option value="Security Camera Installation">Security Camera Installation</option>
+        <option value="Home Theater Setup">Home Theater Setup</option>
       </select>
     </div>
 
-    <!-- Options shown depending on the service -->
-    <div class="form-group" id="extraOptions" style="display:none;"></div>
+    <!-- Dynamic Detail Box -->
+    <div class="form-group" id="detailBox" style="display:none;">
+      <label id="detailLabel">Details*</label>
+      <select id="detail"></select>
+    </div>
 
     <button type="button" onclick="sendBooking()" class="btn-book">📩 Send Booking Request</button>
   </form>
 </section>
+
 
   <!-- FOOTER -->
   <footer>
@@ -255,6 +259,90 @@ function sendBooking() {
   window.open(emailURL, "_blank");
 }
 </script>
+  <script>
+// Show dynamic details depending on service
+function updateDetails() {
+    const service = document.getElementById('service').value;
+    const detailBox = document.getElementById('detailBox');
+    const detail = document.getElementById('detail');
+    const detailLabel = document.getElementById('detailLabel');
+
+    detail.innerHTML = ""; // Clear previous options
+
+    if (service === "TV Mounting") {
+        detailLabel.innerText = "Select TV Size*";
+        detailBox.style.display = "block";
+        detail.innerHTML = `
+          <option value="">-- Choose TV Size --</option>
+          <option>Up to 31″</option>
+          <option>32″ – 59″</option>
+          <option>60″ – 75″</option>
+          <option>76″ – 85″</option>
+          <option>Over 86″</option>
+          <option>Frame TV</option>
+          <option>Projector / Screen</option>
+        `;
+    } else if (service === "Furniture Assembly") {
+        detailLabel.innerText = "Select Item*";
+        detailBox.style.display = "block";
+        detail.innerHTML = `
+          <option>TV Stand</option>
+          <option>Office Chair</option>
+          <option>Small Table</option>
+          <option>Dresser</option>
+          <option>Bed Assembly</option>
+          <option>Bunk Bed</option>
+          <option>Dining Table + Chairs</option>
+          <option>IKEA Wardrobe</option>
+        `;
+    } else if (service === "Electrical Installation") {
+        detailLabel.innerText = "Select Electrical Work*";
+        detailBox.style.display = "block";
+        detail.innerHTML = `
+          <option>Light Fixture Replacement</option>
+          <option>Ceiling Fan Installation</option>
+          <option>Outlet Replacement</option>
+          <option>New Outlet Installation</option>
+          <option>LED Recessed Lights</option>
+          <option>Smart Switch / Dimmer</option>
+          <option>Electric Fireplace Install</option>
+        `;
+    } else if (service === "Security Camera Installation") {
+        detailLabel.innerText = "Number of Cameras*";
+        detailBox.style.display = "block";
+        detail.innerHTML = `
+          <option>1 Camera</option>
+          <option>2 Cameras</option>
+          <option>4 Cameras</option>
+          <option>6 Cameras</option>
+          <option>8 Cameras</option>
+          <option>Doorbell Camera</option>
+        `;
+    } else {
+        detailBox.style.display = "none"; // Hide if nothing selected
+    }
+}
+
+// Booking sender
+function sendBooking() {
+  const name = document.getElementById('name')?.value;
+  const phone = document.getElementById('phoneNum')?.value;
+  const service = document.getElementById('service')?.value;
+  const detail = document.getElementById('detail')?.value || "";
+
+  if (!name || !phone || !service) {
+    alert("Please fill all required fields!");
+    return;
+  }
+
+  const whatsappURL = `https://api.whatsapp.com/send?phone=17139419647&text=Booking%20Request:%0AName:%20${name}%0APhone:%20${phone}%0AService:%20${service}%0ADetail:%20${detail}`;
+  const emailURL = `mailto:fjhomeinstallation@gmail.com?subject=Booking Request&body=Name: ${name}%0APhone: ${phone}%0AService: ${service}%0ADetail: ${detail}`;
+
+  window.open(whatsappURL, "_blank");
+  window.open(emailURL, "_blank");
+}
+</script>
+
 
 </body>
 </html>
