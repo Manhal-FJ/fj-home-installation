@@ -126,19 +126,12 @@
 
 </section>
 
-
-
-  <!-- FOOTER -->
-  <footer>
-    <!-- BOOKING SECTION -->     <!-- 👈 ADD THIS ABOVE FOOTER -->
+  <!-- BOOKING SECTION (Place this BEFORE the footer) -->
 <section id="booking">
   <h2>📅 Book Your Service</h2>
   <p>Send your request by WhatsApp or email — we’ll confirm shortly.</p>
 
-  <!-- WhatsApp FORM -->
-  <form action="https://api.whatsapp.com/send" method="get" target="_blank">
-    <input type="hidden" name="phone" value="17139419647">
-
+  <form id="bookingForm">
     <div class="form-group">
       <label>Your Name*</label>
       <input type="text" id="name" required placeholder="John Doe">
@@ -151,42 +144,117 @@
 
     <div class="form-group">
       <label>Select Service*</label>
-      <select id="service" required>
+      <select id="service" onchange="updateOptions()" required>
         <option value="">-- Choose --</option>
-        <option>TV Mounting</option>
-        <option>Furniture Assembly</option>
-        <option>Electrical Installation</option>
-        <option>Security Camera Installation</option>
-        <option>Home Theater Setup</option>
+        <option value="tv">TV Mounting</option>
+        <option value="furniture">Furniture Assembly</option>
+        <option value="electric">Electrical Installation</option>
+        <option value="camera">Security Camera Installation</option>
+        <option value="theater">Home Theater Setup</option>
       </select>
     </div>
 
-    <button type="button" onclick="sendBooking()" class="btn-book">
-      📩 Send Booking Request
-    </button>
+    <!-- Options shown depending on the service -->
+    <div class="form-group" id="extraOptions" style="display:none;"></div>
+
+    <button type="button" onclick="sendBooking()" class="btn-book">📩 Send Booking Request</button>
   </form>
 </section>
 
-<!-- SCRIPT FOR WHATSAPP + EMAIL -->
-<script>
-function sendBooking() {
-  const name = document.getElementById('name').value;
-  const phone = document.getElementById('phoneNum').value;
-  const service = document.getElementById('service').value;
-
-  const whatsappURL = `https://api.whatsapp.com/send?phone=17139419647&text=Hello%20FJ%20Home%20Installation!%0AMy%20name:%20${name}%0APhone:%20${phone}%0AService:%20${service}`;
-  const emailURL = `mailto:fjhomeinstallation@gmail.com?subject=Booking%20Request&body=Hello%20FJ%20Home%20Installation!%0AMy%20name:%20${name}%0APhone:%20${phone}%0AService:%20${service}`;
-
-  window.open(whatsappURL, "_blank");
-  window.open(emailURL, "_blank");
-}
-</script>
+  <!-- FOOTER -->
+  <footer>
 
     <p>📍 Serving Houston and nearby areas</p>
     <p>© 2025 FJ Home Installation | Licensed & Insured | 
       <a href="mailto:fjhomeinstallation@gmail.com">fjhomeinstallation@gmail.com</a>
     </p>
   </footer>
+<script>
+function updateOptions() {
+  const service = document.getElementById('service').value;
+  const extraDiv = document.getElementById('extraOptions');
+
+  if (service === 'tv') {
+    extraDiv.innerHTML = `
+      <label>TV Size*</label>
+      <select id="detail">
+        <option>Up to 31"</option>
+        <option>32–59"</option>
+        <option>60–75"</option>
+        <option>76–85"</option>
+        <option>Over 86"</option>
+        <option>Frame TV</option>
+        <option>Projector / Screen</option>
+      </select>
+    `;
+    extraDiv.style.display = 'block';
+  }
+  else if (service === 'furniture') {
+    extraDiv.innerHTML = `
+      <label>What Item?</label>
+      <select id="detail">
+        <option>TV Stand</option>
+        <option>Office Chair</option>
+        <option>Dresser</option>
+        <option>Bed Assembly</option>
+        <option>Bunk Bed</option>
+        <option>Dining Set</option>
+        <option>IKEA Wardrobe</option>
+      </select>
+    `;
+    extraDiv.style.display = 'block';
+  }
+  else if (service === 'electric') {
+    extraDiv.innerHTML = `
+      <label>Choose Service</label>
+      <select id="detail">
+        <option>Light Fixture Replacement</option>
+        <option>Ceiling Fan Installation</option>
+        <option>Outlet Replacement</option>
+        <option>LED Lights</option>
+        <option>TV Wire Inside Wall</option>
+        <option>Smart Switch / Dimmer</option>
+      </select>
+    `;
+    extraDiv.style.display = 'block';
+  }
+  else if (service === 'camera') {
+    extraDiv.innerHTML = `
+      <label>Number of Cameras*</label>
+      <select id="detail">
+        <option>1 Camera</option>
+        <option>2 Cameras</option>
+        <option>4 Cameras</option>
+        <option>6 Cameras</option>
+        <option>8 Cameras</option>
+        <option>Ring/Nest Doorbell</option>
+      </select>
+    `;
+    extraDiv.style.display = 'block';
+  }
+  else {
+    extraDiv.style.display = 'none';
+  }
+}
+<script>
+function sendBooking() {
+  const name = document.getElementById('name')?.value;
+  const phone = document.getElementById('phoneNum')?.value;
+  const service = document.getElementById('service')?.value;
+  const detail = document.getElementById('detail')?.value || "";
+
+  if (!name || !phone || !service) {
+    alert("Please fill all required fields!");
+    return;
+  }
+
+  const whatsappURL = `https://api.whatsapp.com/send?phone=17139419647&text=Booking%20Request:%0AName:%20${name}%0APhone:%20${phone}%0AService:%20${service}%0ADetail:%20${detail}`;
+  const emailURL = `mailto:fjhomeinstallation@gmail.com?subject=Booking Request&body=Name: ${name}%0APhone: ${phone}%0AService: ${service}%0ADetail: ${detail}`;
+
+  window.open(whatsappURL, "_blank");
+  window.open(emailURL, "_blank");
+}
+</script>
 
 </body>
 </html>
