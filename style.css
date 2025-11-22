@@ -193,21 +193,17 @@ tr:hover {
 .book-btn:hover {
   background: #ff7600;
 }
-/* Footer Fix */
+/* FINAL FOOTER FIX */
 footer {
-  text-align: center;      /* Center the content */
-  background: #eef3ff;     /* Light background (same as before) */
-  padding: 30px 20px;      /* Add spacing */
+  text-align: center !important;   /* Force center */
+  background: #eef3ff;
+  padding: 30px 20px;
   font-size: 14px;
-  color: #444;             /* Softer text color */
+  color: #444;
 }
 
-footer a {
-  color: #0044cc;
-  text-decoration: none;
-  font-weight: bold;
+footer * {
+  text-align: center !important;    /* Center ALL children */
+  margin: 0 auto;                    /* Force center position */
 }
 
-footer a:hover {
-  text-decoration: underline;
-}
