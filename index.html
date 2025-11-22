@@ -130,6 +130,58 @@
 
   <!-- FOOTER -->
   <footer>
+    <!-- BOOKING SECTION -->     <!-- 👈 ADD THIS ABOVE FOOTER -->
+<section id="booking">
+  <h2>📅 Book Your Service</h2>
+  <p>Send your request by WhatsApp or email — we’ll confirm shortly.</p>
+
+  <!-- WhatsApp FORM -->
+  <form action="https://api.whatsapp.com/send" method="get" target="_blank">
+    <input type="hidden" name="phone" value="17139419647">
+
+    <div class="form-group">
+      <label>Your Name*</label>
+      <input type="text" id="name" required placeholder="John Doe">
+    </div>
+
+    <div class="form-group">
+      <label>Phone Number*</label>
+      <input type="tel" id="phoneNum" required placeholder="713-000-1234">
+    </div>
+
+    <div class="form-group">
+      <label>Select Service*</label>
+      <select id="service" required>
+        <option value="">-- Choose --</option>
+        <option>TV Mounting</option>
+        <option>Furniture Assembly</option>
+        <option>Electrical Installation</option>
+        <option>Security Camera Installation</option>
+        <option>Home Theater Setup</option>
+      </select>
+    </div>
+
+    <button type="button" onclick="sendBooking()" class="btn-book">
+      📩 Send Booking Request
+    </button>
+  </form>
+</section>
+
+<!-- SCRIPT FOR WHATSAPP + EMAIL -->
+<script>
+function sendBooking() {
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phoneNum').value;
+  const service = document.getElementById('service').value;
+
+  const whatsappURL = `https://api.whatsapp.com/send?phone=17139419647&text=Hello%20FJ%20Home%20Installation!%0AMy%20name:%20${name}%0APhone:%20${phone}%0AService:%20${service}`;
+  const emailURL = `mailto:fjhomeinstallation@gmail.com?subject=Booking%20Request&body=Hello%20FJ%20Home%20Installation!%0AMy%20name:%20${name}%0APhone:%20${phone}%0AService:%20${service}`;
+
+  window.open(whatsappURL, "_blank");
+  window.open(emailURL, "_blank");
+}
+</script>
+
     <p>📍 Serving Houston and nearby areas</p>
     <p>© 2025 FJ Home Installation | Licensed & Insured | 
       <a href="mailto:fjhomeinstallation@gmail.com">fjhomeinstallation@gmail.com</a>
