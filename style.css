@@ -1,3 +1,4 @@
+/* ===== ROOT COLORS ===== */
 :root {
   --brand: #0044cc;
   --bg: #f9fbff;
@@ -6,6 +7,7 @@
   --shadow: rgba(0,0,0,0.08);
 }
 
+/* ===== GLOBAL ===== */
 body {
   font-family: "Segoe UI", Tahoma, sans-serif;
   margin: 0;
@@ -14,7 +16,11 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
+section { padding: 60px 20px; text-align: center; }
+h2 { color: var(--brand); margin-bottom: 15px; }
+.sub { max-width: 700px; margin: 0 auto; }
+
+/* ===== HEADER ===== */
 header {
   text-align: center;
   padding: 60px 20px;
@@ -33,12 +39,7 @@ header h1 { color: var(--brand); font-size: 2.4rem; }
 .email-btn { background: #2ea44f; }
 .btn:hover { opacity: 0.8; }
 
-/* Sections */
-section { padding: 60px 20px; text-align: center; }
-h2 { color: var(--brand); margin-bottom: 15px; }
-.sub { max-width: 700px; margin: 0 auto; }
-
-/* Services */
+/* ===== SERVICES ===== */
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -56,82 +57,10 @@ h2 { color: var(--brand); margin-bottom: 15px; }
 .card img { width: 60px; }
 .card:hover { transform: scale(1.05); }
 
-/* ===== Pricing Section (Professional Layout) ===== */
+/* ===== PRICING (PROFESSIONAL LAYOUT) ===== */
 #pricing {
   background: #f8f9ff;
   padding: 60px 20px;
-  text-align: center;
-}
-
-.price-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.price-box {
-  background: #fff;
-  width: 45%;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: 0.3s;
-}
-
-.price-box:hover {
-  transform: translateY(-5px);
-}
-
-.price-box h3 {
-  color: var(--brand);
-  margin-bottom: 12px;
-  font-size: 1.3rem;
-}
-
-.price-box table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.price-box th,
-.price-box td {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-.price-box th { background: #eef2ff; }
-.price-box tr:last-child td { border: none; }
-
-/* Book Service Button */
-.book-btn {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 10px 20px;
-  background: var(--brand);
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-.book-btn:hover { background: #0032a9; }
-
-/* 📱 Mobile Fix */
-@media (max-width: 768px) {
-  .price-box {
-    width: 100%;
-  }
-}
-
-
-.price-box tr:last-child td {
-  border: none;
-}
-/* --- PROFESSIONAL PRICING DESIGN --- */
-.pricing-section {
-  background: linear-gradient(180deg, #f8faff, #ffffff);
-  padding: 80px 20px;
 }
 
 .price-box {
@@ -141,11 +70,6 @@ h2 { color: var(--brand); margin-bottom: 15px; }
   padding: 30px;
   border-radius: 14px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-
-.price-box:hover {
-  transform: scale(1.02);
 }
 
 .price-title {
@@ -155,69 +79,33 @@ h2 { color: var(--brand); margin-bottom: 15px; }
   margin-bottom: 20px;
 }
 
-table {
+.price-box table {
   width: 100%;
   border-collapse: collapse;
   font-size: 1.05rem;
 }
 
-th {
-  background: #e9f0ff;
-  color: var(--brand);
-  padding: 12px;
-  font-weight: bold;
-}
-
-td {
+.price-box th,
+.price-box td {
   padding: 12px;
   border-bottom: 1px solid #eee;
+}
+
+.price-box th {
+  background: #e9f0ff;
+  color: var(--brand);
+  font-weight: bold;
 }
 
 tr:hover {
   background: #f5f7ff;
 }
 
-/* --- BOOK NOW BUTTON --- */
-.book-btn {
-  display: inline-block;
-  background: #ff9800;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
-  margin-top: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.book-btn:hover {
-  background: #ff7600;
-}
-/* FINAL FOOTER FIX */
-footer {
-  text-align: center !important;   /* Force center */
-  background: #eef3ff;
-  padding: 30px 20px;
-  font-size: 14px;
-  color: #444;
-}
-
-footer * {
-  text-align: center !important;    /* Center ALL children */
-  margin: 0 auto;                    /* Force center position */
-}
-
-/* BOOKING SECTION */
+/* ===== BOOKING SECTION ===== */
 #booking {
-  background: #f9fbff;
+  background: #eef3ff;
   text-align: center;
   padding: 60px 20px;
-}
-
-#booking h2 {
-  color: var(--brand);
-  font-size: 2rem;
-  margin-bottom: 10px;
 }
 
 form {
@@ -239,33 +127,6 @@ input, select {
 }
 
 .btn-book {
-  background: #ff9800;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.btn-book:hover { background: #ff7600; }
-
-#booking {
-  background: #eef3ff;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-#booking input, #booking select {
-  padding: 10px;
-  width: 300px;
-  margin: 8px auto;
-  display: block;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-.btn-book {
   background: #0044cc;
   color: white;
   padding: 12px 25px;
@@ -277,3 +138,27 @@ input, select {
 
 .btn-book:hover { background: #003499; }
 
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  background: #eef3ff;
+  padding: 30px 20px;
+  font-size: 14px;
+  color: #444;
+}
+
+footer a {
+  color: var(--brand);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+  .card { width: 100%; }
+  .price-box { width: 90%; }
+}
