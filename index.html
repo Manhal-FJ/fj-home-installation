@@ -181,43 +181,54 @@
 
   </section>
 
-  <!-- BOOKING SECTION (ABOVE FOOTER) -->
-  <section id="booking">
-    <h2>📅 Book Your Service</h2>
-    <p class="sub">Send your request by WhatsApp or email — we’ll confirm shortly.</p>
+ <!-- BOOKING SECTION -->
+<section id="booking">
+  <h2>📅 Book Your Service</h2>
+  <p>Send your request via WhatsApp or email — we’ll confirm shortly.</p>
 
-    <div class="booking-card">
-      <div class="form-group">
-        <label for="name">Your Name*</label>
-        <input type="text" id="name" placeholder="John Doe" required>
-      </div>
-
-      <div class="form-group">
-        <label for="phoneNum">Phone Number*</label>
-        <input type="tel" id="phoneNum" placeholder="713-000-1234" required>
-      </div>
-
-      <div class="form-group">
-        <label for="service">Select Service*</label>
-        <select id="service" required>
-          <option value="">-- Choose --</option>
-          <option value="TV Mounting">TV Mounting</option>
-          <option value="Furniture Assembly">Furniture Assembly</option>
-          <option value="Electrical Installation">Electrical Installation</option>
-          <option value="Security Camera Installation">Security Camera Installation</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="detail">Details (size / item / quantity)*</label>
-        <select id="detail" required>
-          <option value="">-- Select service first --</option>
-        </select>
-      </div>
-
-      <button type="button" class="btn-book" onclick="sendBooking()">📩 Send Booking</button>
+  <form>
+    <div class="form-group">
+      <label>Your Name*</label>
+      <input type="text" id="name" required placeholder="John Doe">
     </div>
-  </section>
+
+    <div class="form-group">
+      <label>Phone Number*</label>
+      <input type="tel" id="phoneNum" required placeholder="713-000-1234">
+    </div>
+
+    <!-- SERVICE SELECTION -->
+    <div class="form-group">
+      <label>Select Service*</label>
+      <select id="service" onchange="updateDetails()" required>
+        <option value="">-- Choose Service --</option>
+        <option value="TV Mounting">TV Mounting</option>
+        <option value="Furniture Assembly">Furniture Assembly</option>
+        <option value="Electrical Installation">Electrical Installation</option>
+        <option value="Security Cameras">Security Camera Installation</option>
+        <option value="Home Theater">Home Theater Setup</option>
+      </select>
+    </div>
+
+    <!-- DETAILS (Dynamic) -->
+    <div class="form-group">
+      <label>Details (Size / Item / Quantity)*</label>
+      <select id="detail" required></select>
+    </div>
+
+    <!-- TECHNICIANS (Only for TV Mounting) -->
+    <div class="form-group" id="techGroup" style="display:none;">
+      <label>Number of Technicians*</label>
+      <select id="tech" required>
+        <option value="1 Technician (You help)">1 Technician (You help)</option>
+        <option value="2 Technicians (Full service)">2 Technicians (Full service)</option>
+      </select>
+    </div>
+
+    <button type="button" onclick="sendBooking()" class="btn-book">📩 Send Booking</button>
+  </form>
+</section>
+
 
   <!-- FOOTER -->
   <footer>
@@ -274,58 +285,76 @@
       ]
     };
 
-    function updateDetails() {
-      const service = serviceSelect.value;
-      detailSelect.innerHTML = "";
+    <script>
+function updateDetails() {
+  const service = document.getElementById('service').value;
+  const detail = document.getElementById('detail');
+  const techGroup = document.getElementById('techGroup');
 
-      if (!service || !optionsByService[service]) {
-        const opt = document.createElement("option");
-        opt.value = "";
-        opt.textContent = "-- Select service first --";
-        detailSelect.appendChild(opt);
-        return;
-      }
+  detail.innerHTML = ''; // Clear old options
+  techGroup.style.display = 'none'; // Hide tech by default
 
-      const placeholder = document.createElement("option");
-      placeholder.value = "";
-      placeholder.textContent = "-- Choose detail --";
-      detailSelect.appendChild(placeholder);
+  if (service === "TV Mounting") {
+    detail.innerHTML = `
+      <option value="">-- Choose TV Size --</option>
+      <option>Up to 31″</option>
+      <option>32″ – 59″</option>
+      <option>60″ – 75″</option>
+      <option>76″ – 85″</option>
+      <option>Over 86″</option>
+      <option>Frame TV</option>
+      <option>Projector / Screen</option>
+    `;
+    techGroup.style.display = 'block'; // Show tech selection only for TV
+  }
 
-      optionsByService[service].forEach(text => {
-        const opt = document.createElement("option");
-        opt.value = text;
-        opt.textContent = text;
-        detailSelect.appendChild(opt);
-      });
-    }
+  if (service === "Furniture Assembly") {
+    detail.innerHTML = `
+      <option>TV Stand</option>
+      <option>Office Chair</option>
+      <option>Small Table</option>
+      <option>Bunk Bed</option>
+      <option>IKEA Closet</option>
+    `;
+  }
 
-    serviceSelect.addEventListener("change", updateDetails);
+  if (service === "Electrical Installation") {
+    detail.innerHTML = `
+      <option>Light Fixture</option>
+      <option>Ceiling Fan Installation</option>
+      <option>Recessed Lights</option>
+      <option>TV Inside Wire</option>
+    `;
+  }
+}
 
-    function sendBooking() {
-      const name = document.getElementById('name').value.trim();
-      const phone = document.getElementById('phoneNum').value.trim();
-      const service = document.getElementById('service').value;
-      const detail = document.getElementById('detail').value;
+function sendBooking() {
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phoneNum').value;
+  const service = document.getElementById('service').value;
+  const detail = document.getElementById('detail').value;
+  const tech = document.getElementById('tech')?.value || "";
 
-      if (!name || !phone || !service || !detail) {
-        alert("Please fill all required fields and choose a detail.");
-        return;
-      }
+  const whatsappURL = `https://api.whatsapp.com/send?phone=17139419647&text=
+  Booking Request:
+  Name: ${name}
+  Phone: ${phone}
+  Service: ${service}
+  Detail: ${detail}
+  Technicians: ${tech}`;
 
-      const baseMsg =
-        `Hello FJ Home Installation!%0A` +
-        `Name: ${encodeURIComponent(name)}%0A` +
-        `Phone: ${encodeURIComponent(phone)}%0A` +
-        `Service: ${encodeURIComponent(service)}%0A` +
-        `Detail: ${encodeURIComponent(detail)}`;
+  const emailURL = `mailto:fjhomeinstallation@gmail.com?subject=Booking%20Request&body=
+  Name: ${name}
+  Phone: ${phone}
+  Service: ${service}
+  Detail: ${detail}
+  Technicians: ${tech}`;
 
-      const whatsappURL = `https://api.whatsapp.com/send?phone=17139419647&text=${baseMsg}`;
-      const emailURL = `mailto:fjhomeinstallation@gmail.com?subject=Booking%20Request&body=${baseMsg}`;
+  window.open(whatsappURL, "_blank");
+  window.open(emailURL, "_blank");
+}
+</script>
 
-      window.open(whatsappURL, "_blank");
-      window.open(emailURL, "_blank");
-    }
-  </script>
 
 </body>
 </html>
