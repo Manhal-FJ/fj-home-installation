@@ -1,154 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FJ Home Installation | Houston TX</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FJ Home Installation</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+<!-- ================= HEADER ================= -->
 <header>
-  <h1>FJ Home Installation</h1>
-  <p><strong>TV mounting, furniture assembly, electrical & camera installation</strong> — serving Houston, TX.</p>
-  <div class="btn-container">
-    <a href="tel:17139419647" class="btn call-btn">📞 Call (713) 941-9647</a>
-    <a href="mailto:fjhomeinstallation@gmail.com" class="btn email-btn">✉️ Email Us</a>
-  </div>
+    <h1>FJ Home Installation</h1>
+    <p>Professional TV mounting, furniture assembly, electrical installations, and security camera setup.</p>
+    <a href="tel:17139419647" class="btn">📞 Call (713) 941-9647</a>
+    <a href="mailto:fjhomeinstallation@gmail.com" class="btn email-btn">📧 Email Us</a>
 </header>
 
-<section id="pricing">
-  <h2>💰 Pricing & Rates</h2>
-  <p class="sub">No hidden fees — clear upfront prices.</p>
+<!-- ================= SERVICES SECTION ================= -->
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="tv-mounting.png" alt="TV Mounting">
+            <h3>TV Mounting</h3>
+            <p>Any size – wall mount & wire hiding.</p>
+        </div>
 
-  <!-- TV -->
-  <div class="price-box">
-    <h3>📺 TV Mounting</h3>
-    <table>
-      <thead><tr><th>TV Size</th><th>1 Tech</th><th>2 Techs</th></tr></thead>
-      <tbody>
-        <tr><td>Up to 31″</td><td>$69</td><td>$119</td></tr>
-        <tr><td>32″ – 59″</td><td>$109</td><td>$159</td></tr>
-        <tr><td>60″ – 75″</td><td>$129</td><td>$188</td></tr>
-        <tr><td>76″ – 85″</td><td>$159</td><td>$218</td></tr>
-        <tr><td>Over 86″</td><td>$189</td><td>$249</td></tr>
-        <tr><td>Frame TV</td><td>$159</td><td>$218</td></tr>
-        <tr><td>Projector / Screen</td><td>$139</td><td>$198</td></tr>
-      </tbody>
-    </table>
-  </div>
+        <div class="card">
+            <img src="home-install-services.png" alt="Furniture Assembly">
+            <h3>Furniture Assembly</h3>
+            <p>Beds, tables, chairs & more.</p>
+        </div>
 
-  <!-- Furniture -->
-  <div class="price-box">
-    <h3>🛠 Furniture Assembly</h3>
-    <table>
-      <thead><tr><th>Item</th><th>Price</th></tr></thead>
-      <tbody>
-        <tr><td>TV Stand</td><td>$40 – $50</td></tr>
-        <tr><td>Office Chair</td><td>$40</td></tr>
-        <tr><td>Small Table</td><td>$50</td></tr>
-        <tr><td>Bunk Bed</td><td>$150 – $200</td></tr>
-        <tr><td>IKEA Closet</td><td>$200 – $300</td></tr>
-        <tr><td>Full Room Setup</td><td>$350 – $450</td></tr>
-      </tbody>
-    </table>
-  </div>
+        <div class="card">
+            <img src="electrical-work.png" alt="Electrical Installation">
+            <h3>Electrical Installation</h3>
+            <p>Outlets, lights, ceiling fans.</p>
+        </div>
 
-  <!-- Electrical -->
-  <div class="price-box">
-    <h3>⚡ Electrical Installation</h3>
-    <table>
-      <thead><tr><th>Service</th><th>Price</th></tr></thead>
-      <tbody>
-        <tr><td>Light Fixture Replacement</td><td>$69</td></tr>
-        <tr><td>Ceiling Fan Installation</td><td>$129 – $179</td></tr>
-        <tr><td>Outlet Replacement</td><td>$45 – $75</td></tr>
-        <tr><td>Recessed Lights</td><td>$60 – $80</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- Cameras -->
-  <div class="price-box">
-    <h3>🎥 Security Camera Installation</h3>
-    <table>
-      <thead><tr><th>Item</th><th>Price</th></tr></thead>
-      <tbody>
-        <tr><td>1 Camera</td><td>$99</td></tr>
-        <tr><td>2 Cameras</td><td>$179</td></tr>
-        <tr><td>4 Cameras</td><td>$299</td></tr>
-        <tr><td>8 Cameras</td><td>$499</td></tr>
-        <tr><td>Ring/Nest Doorbell</td><td>$79</td></tr>
-      </tbody>
-    </table>
-  </div>
+        <div class="card">
+            <img src="camera-install.png" alt="Security Cameras">
+            <h3>Security Cameras</h3>
+            <p>Ring, Nest & wired cameras.</p>
+        </div>
+    </div>
 </section>
 
-<!-- BOOKING -->
-<section id="booking">
-  <h2>📅 Book Your Service</h2>
-  <form>
-    <input type="text" id="name" required placeholder="Your Name*">
-    <input type="tel" id="phoneNum" required placeholder="Phone Number*">
+<!-- ================= PRICING SECTION ================= -->
+<section id="pricing">
+    <h2>💰 Pricing & Rates</h2>
+    <p>No hidden fees — clear upfront prices.</p>
 
-    <select id="service" onchange="updateDetails()" required>
-      <option value="">-- Choose Service --</option>
-      <option value="TV Mounting">TV Mounting</option>
-      <option value="Furniture Assembly">Furniture Assembly</option>
-      <option value="Electrical Installation">Electrical Installation</option>
-      <option value="Security Cameras">Security Cameras</option>
-    </select>
-
-    <!-- DETAILS -->
-    <select id="detail" required></select>
-
-    <!-- TECH ONLY FOR TV -->
-    <div id="techGroup" style="display:none;">
-      <label>Number of Technicians</label>
-      <select id="tech">
-        <option value="1 Technician">1 Technician (You help)</option>
-        <option value="2 Technicians">2 Technicians (Full service)</option>
-      </select>
+    <!-- TV MOUNTING -->
+    <div class="price-box">
+        <h3>📺 TV Mounting</h3>
+        <table>
+            <tr><th>TV Size</th><th>1 Tech</th><th>2 Techs</th></tr>
+            <tr><td>Up to 31″</td><td>$69</td><td>$119</td></tr>
+            <tr><td>32″ – 59″</td><td>$109</td><td>$159</td></tr>
+            <tr><td>60″ – 75″</td><td>$129</td><td>$188</td></tr>
+            <tr><td>76″ – 85″</td><td>$159</td><td>$218</td></tr>
+            <tr><td>Over 86″</td><td>$189</td><td>$249</td></tr>
+            <tr><td>Frame TV</td><td>$159</td><td>$218</td></tr>
+            <tr><td>Projector / Screen</td><td>$139</td><td>$198</td></tr>
+        </table>
     </div>
 
-    <button type="button" onclick="sendBooking()" class="btn-book">📩 Send Booking</button>
-  </form>
+    <!-- FURNITURE ASSEMBLY -->
+    <div class="price-box">
+        <h3>🛠 Furniture Assembly</h3>
+        <table>
+            <tr><th>Item</th><th>Price</th></tr>
+            <tr><td>TV Stand</td><td>$40 – $50</td></tr>
+            <tr><td>Office Chair</td><td>$40</td></tr>
+            <tr><td>Small Table</td><td>$50</td></tr>
+            <tr><td>Dresser (6 drawers)</td><td>$80</td></tr>
+            <tr><td>Bunk Bed</td><td>$150 – $200</td></tr>
+            <tr><td>IKEA Closet</td><td>$200 – $300</td></tr>
+            <tr><td>Full Room Setup</td><td>$350 – $450</td></tr>
+        </table>
+    </div>
+
+    <!-- ELECTRICAL WORK -->
+    <div class="price-box">
+        <h3>⚡ Electrical Installation</h3>
+        <table>
+            <tr><th>Service</th><th>Price</th></tr>
+            <tr><td>Light Fixture Replacement</td><td>$69</td></tr>
+            <tr><td>Ceiling Fan Installation</td><td>$129 – $179</td></tr>
+            <tr><td>Outlet Replacement</td><td>$45 – $75</td></tr>
+            <tr><td>Recessed Lights (each)</td><td>$60 – $80</td></tr>
+        </table>
+    </div>
+
+    <!-- SECURITY CAMERAS -->
+    <div class="price-box">
+        <h3>🎥 Security Camera Installation</h3>
+        <table>
+            <tr><th>Service</th><th>Price</th></tr>
+            <tr><td>1 Camera</td><td>$99</td></tr>
+            <tr><td>2 Cameras</td><td>$179</td></tr>
+            <tr><td>4 Cameras</td><td>$299</td></tr>
+            <tr><td>6 Cameras</td><td>$399</td></tr>
+            <tr><td>8 Cameras</td><td>$499</td></tr>
+            <tr><td>Ring/Nest Doorbell</td><td>$79</td></tr>
+            <tr><td>Cable Management</td><td>+$20 per device</td></tr>
+        </table>
+    </div>
 </section>
 
+<!-- ================= BOOKING SECTION ================= -->
+<section id="booking">
+    <h2>📅 Book Your Service</h2>
+    <p>Send your request via WhatsApp or email — we’ll confirm shortly.</p>
+
+    <div class="form-box">
+        <input type="text" id="name" placeholder="Your Name*" required>
+        <input type="tel" id="phoneNum" placeholder="Phone Number*" required>
+
+        <select id="service" onchange="showDetails()" required>
+            <option value="">Select Service*</option>
+            <option>TV Mounting</option>
+            <option>Furniture Assembly</option>
+            <option>Electrical Installation</option>
+            <option>Security Camera Installation</option>
+        </select>
+
+        <select id="details" style="display:none;"></select>
+
+        <button onclick="sendBooking()" class="btn-book">📩 Send Booking</button>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
 <footer>
-  <p>📍 Serving Houston & nearby areas</p>
-  <p>© 2025 FJ Home Installation | Licensed & Insured</p>
+    <p>📍 Serving Houston & Nearby Areas</p>
+    <p>© 2025 FJ Home Installation |  
+        <a href="mailto:fjhomeinstallation@gmail.com">Email Us</a></p>
 </footer>
 
+<!-- ================= SCRIPTS ================= -->
 <script>
-function updateDetails() {
-  const service = document.getElementById("service").value;
-  const detail = document.getElementById("detail");
-  const techGroup = document.getElementById("techGroup");
+function showDetails() {
+  const service = document.getElementById('service').value;
+  const details = document.getElementById('details');
+  details.style.display = 'block';
+  let options = "";
 
-  const options = {
-    "TV Mounting": ["Up to 31″", "32″–59″", "60″–75″", "76″–85″", "Over 86″", "Frame TV", "Projector/Screen"],
-    "Furniture Assembly": ["TV Stand","IKEA Closet","Bunk Bed","Office Chair","Full Room Setup"],
-    "Electrical Installation": ["Light Fixture","Ceiling Fan","Outlet","Recessed Lights"],
-    "Security Cameras": ["1 Camera","2 Cameras","4 Cameras","8 Cameras","Ring Doorbell"]
-  };
+  if (service === "TV Mounting") {
+      options = `
+        <option>Up to 31″</option>
+        <option>32″ – 59″</option>
+        <option>60″ – 75″</option>
+        <option>76″ – 85″</option>
+        <option>Over 86″</option>
+        <option>Projector / Screen</option>`;
+  } 
+  else if (service === "Furniture Assembly") {
+      options = `
+        <option>TV Stand</option>
+        <option>Office Chair</option>
+        <option>Small Table</option>
+        <option>Bunk Bed</option>
+        <option>IKEA Closet</option>`;
+  }
+  else if (service === "Electrical Installation") {
+      options = `
+        <option>Light Fixture</option>
+        <option>Ceiling Fan</option>
+        <option>Outlet Replacement</option>
+        <option>Recessed Lights</option>`;
+  }
+  else if (service === "Security Camera Installation") {
+      options = `
+        <option>1 Camera</option>
+        <option>2 Cameras</option>
+        <option>4 Cameras</option>
+        <option>Ring/Nest Doorbell</option>`;
+  }
 
-  detail.innerHTML = options[service]?.map(item => `<option>${item}</option>`).join("") || "";
-  techGroup.style.display = service === "TV Mounting" ? "block" : "none";
+  details.innerHTML = options;
 }
 
 function sendBooking() {
-  const n = document.getElementById("name").value;
-  const p = document.getElementById("phoneNum").value;
-  const s = document.getElementById("service").value;
-  const d = document.getElementById("detail").value;
-  const t = document.getElementById("tech")?.value || "";
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phoneNum').value;
+  const service = document.getElementById('service').value;
+  const detail = document.getElementById('details').value;
 
-  const whats = `https://api.whatsapp.com/send?phone=17139419647&text=Booking:%0AName:${n}%0APhone:${p}%0AService:${s}%0ADetail:${d}%0ATechnicians:${t}`;
-  const email = `mailto:fjhomeinstallation@gmail.com?subject=Booking&body=Name:${n}%0APhone:${p}%0AService:${s}%0ADetail:${d}%0ATechnicians:${t}`;
-  window.open(whats, "_blank");
-  window.open(email, "_blank");
+  const whatsappURL = `https://api.whatsapp.com/send?phone=17139419647&text=Booking%20Request:%0AName:%20${name}%0APhone:%20${phone}%0AService:%20${service}%0ADetail:%20${detail}`;
+  window.open(whatsappURL, "_blank");
 }
 </script>
 
