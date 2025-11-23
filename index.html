@@ -285,75 +285,7 @@
       ]
     };
 
-    <script>
-function updateDetails() {
-  const service = document.getElementById('service').value;
-  const detail = document.getElementById('detail');
-  const techGroup = document.getElementById('techGroup');
-
-  detail.innerHTML = ''; // Clear old options
-  techGroup.style.display = 'none'; // Hide tech by default
-
-  if (service === "TV Mounting") {
-    detail.innerHTML = `
-      <option value="">-- Choose TV Size --</option>
-      <option>Up to 31″</option>
-      <option>32″ – 59″</option>
-      <option>60″ – 75″</option>
-      <option>76″ – 85″</option>
-      <option>Over 86″</option>
-      <option>Frame TV</option>
-      <option>Projector / Screen</option>
-    `;
-    techGroup.style.display = 'block'; // Show tech selection only for TV
-  }
-
-  if (service === "Furniture Assembly") {
-    detail.innerHTML = `
-      <option>TV Stand</option>
-      <option>Office Chair</option>
-      <option>Small Table</option>
-      <option>Bunk Bed</option>
-      <option>IKEA Closet</option>
-    `;
-  }
-
-  if (service === "Electrical Installation") {
-    detail.innerHTML = `
-      <option>Light Fixture</option>
-      <option>Ceiling Fan Installation</option>
-      <option>Recessed Lights</option>
-      <option>TV Inside Wire</option>
-    `;
-  }
-}
-
-function sendBooking() {
-  const name = document.getElementById('name').value;
-  const phone = document.getElementById('phoneNum').value;
-  const service = document.getElementById('service').value;
-  const detail = document.getElementById('detail').value;
-  const tech = document.getElementById('tech')?.value || "";
-
-  const whatsappURL = `https://api.whatsapp.com/send?phone=17139419647&text=
-  Booking Request:
-  Name: ${name}
-  Phone: ${phone}
-  Service: ${service}
-  Detail: ${detail}
-  Technicians: ${tech}`;
-
-  const emailURL = `mailto:fjhomeinstallation@gmail.com?subject=Booking%20Request&body=
-  Name: ${name}
-  Phone: ${phone}
-  Service: ${service}
-  Detail: ${detail}
-  Technicians: ${tech}`;
-
-  window.open(whatsappURL, "_blank");
-  window.open(emailURL, "_blank");
-}
-</script>
+   
 
 
 </body>
