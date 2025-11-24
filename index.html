@@ -430,5 +430,13 @@
       window.open(emailURL, "_blank");
     }
   </script>
+  <script>
+document.querySelectorAll(".faq-item h3").forEach(item => {
+  item.addEventListener("click", () => {
+    const p = item.nextElementSibling;
+    p.style.display = (p.style.display === "block") ? "none" : "block";
+  });
+});
+</script>
 </body>
 </html>
