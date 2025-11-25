@@ -399,63 +399,62 @@ footer a:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* ⭐ Luxury Blue Review Cards */
-.reviews-section {
+/* ⭐ Luxury Blue Review Cards (v2 fixed) */
+.reviews-cards-section {
     background: #f6f8ff;
     padding: 60px 20px;
     text-align: center;
     margin-top: 40px;
-    border-radius: 12px;
 }
 
-.reviews-header h2 {
+.reviews-cards-section .reviews-header h2 {
     font-size: 30px;
-    color: #0033aa; /* FJ blue */
-    margin-bottom: 10px;
+    color: #0033aa;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.reviews-header p {
+.reviews-cards-section .reviews-header p {
     font-size: 16px;
     color: #444;
     margin-bottom: 40px;
 }
 
-.reviews-container {
+.reviews-cards-section .reviews-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     padding: 0 20px;
 }
 
-.review-card {
-    background: #ffffff;
-    border-radius: 16px;
+.reviews-cards-section .review-card {
+    background: white;
     padding: 25px;
-    box-shadow: 0px 8px 25px rgba(0, 60, 150, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 50, 150, 0.12);
     border: 1px solid #d7e2ff;
     transition: 0.3s ease;
 }
 
-.review-card:hover {
+.reviews-cards-section .review-card:hover {
     transform: translateY(-5px);
 }
 
-.stars {
+.reviews-cards-section .stars {
     font-size: 22px;
-    color: #f2c200; /* gold */
+    color: #f2c200;
     margin-bottom: 12px;
 }
 
-.review-text {
+.reviews-cards-section .review-text {
     font-size: 17px;
     color: #222;
-    line-height: 1.5;
     margin-bottom: 15px;
 }
 
-.review-name {
+.reviews-cards-section .review-name {
     font-size: 14px;
-    color: #0044cc;
+    color: #0033aa;
     font-weight: bold;
 }
+
