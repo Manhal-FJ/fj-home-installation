@@ -391,3 +391,11 @@ footer a:hover {
     background: #0056b3;
 }
 
+/* Google Form Embed Styling */
+.reviews-section iframe {
+  max-width: 800px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
