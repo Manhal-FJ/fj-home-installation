@@ -399,3 +399,63 @@ footer a:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+/* ⭐ Luxury Blue Review Cards */
+.reviews-section {
+    background: #f6f8ff;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 12px;
+}
+
+.reviews-header h2 {
+    font-size: 30px;
+    color: #0033aa; /* FJ blue */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.reviews-header p {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 0 20px;
+}
+
+.review-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0px 8px 25px rgba(0, 60, 150, 0.12);
+    border: 1px solid #d7e2ff;
+    transition: 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.stars {
+    font-size: 22px;
+    color: #f2c200; /* gold */
+    margin-bottom: 12px;
+}
+
+.review-text {
+    font-size: 17px;
+    color: #222;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.review-name {
+    font-size: 14px;
+    color: #0044cc;
+    font-weight: bold;
+}
