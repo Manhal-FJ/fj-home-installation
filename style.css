@@ -458,3 +458,9 @@ footer a:hover {
     font-weight: bold;
 }
 
+#reviews h2,
+#reviews p {
+    text-align: center !important;
+    margin: 0 auto;
+}
+
