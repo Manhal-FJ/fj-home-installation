@@ -34,13 +34,11 @@ Houston • Katy • Richmond • Sugar Land • Cypress • Mission Bend • Be
 ---
 
 ## ⭐ Why Choose Us?
-
 - 4+ Years of Local Experience  
 - Affordable Pricing  
-- Licensed & Insured  
 - Clean & Organized Work  
 - Friendly & On-Time  
-- Satisfaction Guaranteed  
+- Satisfaction Guaranteed
 
 ---
 
