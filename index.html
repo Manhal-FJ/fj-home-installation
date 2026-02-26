@@ -323,9 +323,7 @@
     const techGroup     = document.getElementById("tech-group");
     const techSelect    = document.getElementById("tech");
 
-    serviceSelect.addEventListener("change", function () {
-      const service = this.value;
-
+    function updateForm(service) {
       detailSelect.innerHTML = "";
       const placeholder = document.createElement("option");
       placeholder.value = "";
@@ -351,6 +349,13 @@
           detailSelect.appendChild(option);
         });
       }
+    }
+
+    // Fire on page load in case a value is pre-selected
+    if (serviceSelect.value) updateForm(serviceSelect.value);
+
+    serviceSelect.addEventListener("change", function () {
+      updateForm(this.value);
     });
 
     function sendBooking(event) {
